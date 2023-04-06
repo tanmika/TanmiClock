@@ -134,7 +134,6 @@
     <ClInclude Include="TanmiClock_64.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\EngineProject\实验内容——time\Main.cpp" />
     <ClCompile Include="demo.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

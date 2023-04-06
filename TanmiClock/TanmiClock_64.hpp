@@ -171,16 +171,6 @@ namespace TanmiClock
 		~Clock() = default;
 	};
 
-	// TODO:
-	// new ClockEventElem virtual
-	// ClockElem:
-	//		unordered_map<std::string, void(*)(double, ClockEventElem)>ClockEventList
-	// Clock:
-	//		SetEventBand(std::string, std::string, ClockEventList&)
-	//		SetEventErase(std::string, std::string)
-	//		SetEventClear(std::string)
-	//
-
 	Clock& Clock::Instance()
 	{
 		static Clock clk;
