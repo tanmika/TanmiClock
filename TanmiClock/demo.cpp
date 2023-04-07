@@ -1,7 +1,7 @@
 #include "TanmiClock_64.hpp"
 #include <vector>
 
-using namespace TanmiClock;
+using namespace TanmiEngine;
 
 auto calFPS(std::string&) -> int;
 auto calStability(std::vector<double>&) -> double;
@@ -72,6 +72,9 @@ auto calStability(std::vector<double>& v) -> double
 auto showDemo(std::string& str) -> int
 {
 	Clock& clk = Clock::Instance();
+	std::string str3("clk3");
+	clk.CopyClock(str, str3);
+	clk.SetFramePerSecond(str3, 5);
 	const float time = 10.0f;
 	int count = 0;
 	int begin = clk.GetElapsed(str);
@@ -95,18 +98,18 @@ auto showDemo(std::string& str) -> int
 			}
 			++count;
 		}
-		if (clk.GetUpdate())
+		if (clk.GetUpdate(str3))
 		{
 			std::cout << "-----\n";
 		}
 		if (clk.GetElapsed(str) - begin >= time * 400 && set_pause == 0)
 		{
-			clk.SetPause("Golbal", true);
+			clk.SetPause(str3, true);
 			++set_pause;
 		}
 		if (clk.GetElapsed(str) - begin >= time * 600 && set_pause == 1)
 		{
-			clk.SetPause("Golbal", false);
+			clk.SetPause(str3, false);
 			++set_pause;
 		}
 		if (clk.GetElapsed(str) - begin >= time * 1000)

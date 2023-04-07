@@ -67,7 +67,7 @@ namespace TanmiEngine
 	public:
 		~ClockElem() = default;
 		ClockElem() = delete;
-		ClockElem(ClockElem&, std::string);
+		ClockElem(ClockElem&, std::string, ull);
 		ClockElem(std::string _name, ull _cycle, ull _update, float _scale, bool _pause) :
 			name(_name), cycle(_cycle), last_cycle(_cycle), update_tick(_update), ins_cycle(_cycle),
 			pause_cycle(0), relative_tick(0), scale(_scale), pause(_pause), temp_ull(0), temp_lint({})
@@ -107,12 +107,9 @@ namespace TanmiEngine
 		}
 	};
 
-	ClockElem::ClockElem(ClockElem& e, std::string _name) : name(_name)
+	ClockElem::ClockElem(ClockElem& e, std::string _name, ull _cycle) : name(_name), cycle(_cycle), last_cycle(_cycle), ins_cycle(_cycle)
 	{
-		this->cycle = e.cycle;
-		this->last_cycle = e.last_cycle;
 		this->update_tick = e.update_tick;
-		this->ins_cycle = e.ins_cycle;
 		this->pause_cycle = e.pause_cycle;
 		this->relative_tick = e.relative_tick;
 		this->scale = e.scale;
@@ -168,6 +165,8 @@ namespace TanmiEngine
 		bool NewClock(std::string, double);
 		// 移除时钟，参数为时钟名称
 		bool EraseClock(std::string);
+		// 复制时钟，参数为时钟名称和新时钟名称
+		bool CopyClock(std::string, std::string);
 		//----------getFunction----------
 		// 获取时钟是否超过更新点，是则更新时钟，参数为时钟名称
 		bool GetUpdate(std::string);
@@ -257,6 +256,25 @@ namespace TanmiEngine
 		catch (ClockException& exp)
 		{
 			std::cout << "\n::Clock::EraseClock()" << exp.what() << std::endl;
+		}
+		return false;
+	}
+
+	inline bool Clock::CopyClock(std::string str, std::string newclk)
+	{
+		auto e = this->getIterator(str);
+		try
+		{
+			if (clockMap.contains(newclk))
+				throw ClockNameExistException();
+			if (e.get() == nullptr)
+				throw ClockNotFoundException();
+			auto clkelem = std::make_shared<ClockElem>(*e,newclk,getCycleAndFreqIns().first);
+			clockMap[newclk] = clkelem;
+		}
+		catch (ClockException& exp)
+		{
+			std::cout << "\n::Clock::CopyClock()" << exp.what() << std::endl;
 		}
 		return false;
 	}
