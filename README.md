@@ -1,7 +1,9 @@
 # TanmiClock
-## 2023.4.7
+## 2023.4.8 update
 
 一个自建引擎的简单时钟库，基于C++20 & VS2022
+
+*部分功能需要包含事件系统库以启用*
 
 ### 用法
 
@@ -11,6 +13,9 @@
 
 	// 新建时钟test
 	clk.NewClock("test", 60);
+
+	// 以test时钟为蓝本复制时钟clk
+	clk.CopyClock("test", "clk");
 
 	// 获取时钟test的刷新率
 	int fps = clk.GetFramePerSecond("test");
@@ -44,11 +49,21 @@
 	// 获取时钟test自上一刷新节点经过的相对时长
 	double tickRelative = clk.GetTickRelative("test");
 
-	// 重置时钟test计时器
+	// 重置时钟test
 	clk.ResetClockIns("test");
 
 	// 移除时钟test
 	clk.EraseClock("test");
+
+	// 以下内容需包含事件系统以启用
+		// 添加事件test_event至时钟clk
+		clk.AddEvent("clk", "test_event");
+		// 移除clk中事件test_event
+		clk.RemoveEvent("clk", "test_event");
+		// 获取clk中的所有事件
+		std::vector<std::string> eventList = clk.GetEventList("clk");
+		// 移除clk中所有事件
+		clk.ClearEventList("clk");
 ```
 
 
@@ -82,31 +97,35 @@ class Clock
 		// 获取Clock实例引用
 		static Clock& Instance();
 		//----------elemFunction----------
-		// 新建时钟
+		// 新建时钟，参数为时钟名称和刷新率
 		bool NewClock(std::string, double);
-		// 移除时钟
+		// 移除时钟，参数为时钟名称
 		bool EraseClock(std::string);
+		// 复制时钟，参数为时钟名称和新时钟名称
+		bool CopyClock(std::string, std::string);
 		//----------getFunction----------
-		// 获取时钟是否超过更新点，是则更新时钟
-		bool GetUpdate(std::string);
-		// 获取时钟刷新率
-		int GetFramePerSecond(std::string);
-		// 获取时钟自创建以来经过的绝对时长
-		int GetElapsed(std::string);
-		// 获取时钟自上一刷新节点经过的绝对时长
-		double GetTick(std::string);
-		// 获取时钟自创建以来经过的相对时长
-		int GetElapsedRelative(std::string);
-		// 获取时钟自上一刷新节点经过的相对时长
-		double GetTickRelative(std::string);
+		// 获取时钟是否超过更新点，是则更新时钟，参数为时钟名称
+		bool GetUpdate(std::string)const;
+		// 获取时钟是否暂停，参数为时钟名称
+		bool GetPause(std::string)const;
+		// 获取时钟刷新率，参数为时钟名称
+		int GetFramePerSecond(std::string)const;
+		// 获取时钟自创建以来经过的绝对时长，参数为时钟名称
+		int GetElapsed(std::string)const;
+		// 获取时钟自上一刷新节点经过的绝对时长，参数为时钟名称
+		double GetTick(std::string)const;
+		// 获取时钟自创建以来经过的相对时长，参数为时钟名称
+		int GetElapsedRelative(std::string)const;
+		// 获取时钟自上一刷新节点经过的相对时长，参数为时钟名称
+		double GetTickRelative(std::string)const;
 		//----------setFunction----------
-		// 设置时钟状态暂停或继续
+		// 设置时钟状态暂停或继续，参数为时钟名称和布尔值，true表示暂停，false表示继续
 		void SetPause(std::string, bool);
-		// 设置刷新率
+		// 设置刷新率，参数为时钟名称和刷新率
 		void SetFramePerSecond(std::string, double);
-		// 设置时间缩放
+		// 设置时间缩放，参数为时钟名称和缩放值
 		void SetFrameScale(std::string, double);
-		// 重置时钟计时器
+		// 重置时钟计时器，参数为时钟名称
 		void ResetClockIns(std::string);
 		//-----------tool-----------
 		// usingned long long计数器与ms计数器转换（Debug）
@@ -115,6 +134,17 @@ class Clock
 			auto freq = getCycleAndFreqIns().second;
 			return (time_ull * 1000 / freq);
 		}
+
+		// 以下内容需包含事件系统以启用
+			// 添加事件至时钟
+			void AddEvent(std::string, std::string);
+			// 移除事件
+			void RemoveEvent(std::string, std::string);
+			// 获取事件列表
+			std::vector<std::string>& GetEventList(std::string);
+			// 清空事件列表
+			void ClearEventList(std::string);
+
 		void DEBUG(std::string);
 		...
 	};
