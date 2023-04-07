@@ -12,7 +12,7 @@
 #include <exception>
 
 // 使用单例模式与线程安全 支持拓展
-namespace TanmiClock
+namespace TanmiEngine
 {
 	using ull = unsigned long long;
 	using lint = LARGE_INTEGER;
@@ -34,15 +34,15 @@ namespace TanmiClock
 			return "::Expection out_of_range";
 		}
 	};
-	class ClockNoFoundException : public ClockException
+	class ClockNotFoundException : public ClockException
 	{
 	public:
 		virtual const char* what () const throw ()
 		{
-			return "::Expection clock_no_found";
+			return "::Expection clock_not_found";
 		}
 	};
-	class ClockNameExist :public ClockException
+	class ClockNameExistException :public ClockException
 	{
 	public:
 		virtual const char* what () const throw ()
@@ -50,6 +50,16 @@ namespace TanmiClock
 			return "::Expection name_exist";
 		}
 	};
+#ifdef EVENT_SYSTEM
+	class ClockEventNotFoundException :public ClockException
+	{
+	public:
+		virtual const char* what () const throw ()
+		{
+			return "::Expection event_not_found";
+		}
+	};
+#endif // EVENT_SYSTEM
 
 	// element
 	class ClockElem
@@ -57,6 +67,7 @@ namespace TanmiClock
 	public:
 		~ClockElem() = default;
 		ClockElem() = delete;
+		ClockElem(ClockElem&, std::string);
 		ClockElem(std::string _name, ull _cycle, ull _update, float _scale, bool _pause) :
 			name(_name), cycle(_cycle), last_cycle(_cycle), update_tick(_update), ins_cycle(_cycle),
 			pause_cycle(0), relative_tick(0), scale(_scale), pause(_pause), temp_ull(0), temp_lint({})
@@ -75,6 +86,9 @@ namespace TanmiClock
 		lint temp_lint;			// 缓冲
 		std::mutex lock;		// 数据锁
 		std::mutex templock;	// 缓冲锁
+#ifdef EVENT_SYSTEM
+		std::vector<std::string> eventList;	// 事件列表
+#endif // EVENT_SYSTEM
 		//----------setting----------
 		inline void setNameStr(const std::string _str)
 		{
@@ -93,6 +107,20 @@ namespace TanmiClock
 		}
 	};
 
+	ClockElem::ClockElem(ClockElem& e, std::string _name) : name(_name)
+	{
+		this->cycle = e.cycle;
+		this->last_cycle = e.last_cycle;
+		this->update_tick = e.update_tick;
+		this->ins_cycle = e.ins_cycle;
+		this->pause_cycle = e.pause_cycle;
+		this->relative_tick = e.relative_tick;
+		this->scale = e.scale;
+		this->pause = e.pause;
+		this->temp_ull = e.temp_ull;
+		this->temp_lint = e.temp_lint;
+	}
+
 	// singleton class
 	class Clock
 	{
@@ -103,11 +131,15 @@ namespace TanmiClock
 		lint temp_lint_clk;
 	private:
 		const int MAX_FRAME_RATE_PER_SECOND = 1000;
-		const int MIN_FRAME_RATE_PER_SECOND = 0.001;
+		const double MIN_FRAME_RATE_PER_SECOND = 0.001;
 		const int MAX_SCALE = 1000;
-		const int MIN_SCALE = 0.001;
+		const double MIN_SCALE = 0.001;
 	private:
 		Clock();
+		Clock(Clock&) = delete;
+		Clock& operator=(Clock&) = delete;
+		Clock(Clock&&) = delete;
+		Clock& operator=(Clock&&) = delete;
 		//----------tool----------
 		// 获取时钟对象指针，失败时返回nullptr
 		inline std::shared_ptr<ClockElem> getIterator(std::string);
@@ -121,6 +153,7 @@ namespace TanmiClock
 		inline ull& getFreqNow(std::string);
 		// 获取ull时钟频率，使用元素缓冲
 		inline ull& getFreqNow(std::shared_ptr<ClockElem>);
+
 		//----------function----------
 		// 获取时钟是否超过更新点，是则更新时钟
 		inline bool isUpdate(std::string);
@@ -131,31 +164,31 @@ namespace TanmiClock
 		// 获取Clock实例引用
 		static Clock& Instance();
 		//----------elemFunction----------
-		// 新建时钟
+		// 新建时钟，参数为时钟名称和刷新率
 		bool NewClock(std::string, double);
-		// 移除时钟
+		// 移除时钟，参数为时钟名称
 		bool EraseClock(std::string);
 		//----------getFunction----------
-		// 获取时钟是否超过更新点，是则更新时钟
+		// 获取时钟是否超过更新点，是则更新时钟，参数为时钟名称
 		bool GetUpdate(std::string);
-		// 获取时钟刷新率
+		// 获取时钟刷新率，参数为时钟名称
 		int GetFramePerSecond(std::string);
-		// 获取时钟自创建以来经过的绝对时长
+		// 获取时钟自创建以来经过的绝对时长，参数为时钟名称
 		int GetElapsed(std::string);
-		// 获取时钟自上一刷新节点经过的绝对时长
+		// 获取时钟自上一刷新节点经过的绝对时长，参数为时钟名称
 		double GetTick(std::string);
-		// 获取时钟自创建以来经过的相对时长
+		// 获取时钟自创建以来经过的相对时长，参数为时钟名称
 		int GetElapsedRelative(std::string);
-		// 获取时钟自上一刷新节点经过的相对时长
+		// 获取时钟自上一刷新节点经过的相对时长，参数为时钟名称
 		double GetTickRelative(std::string);
 		//----------setFunction----------
-		// 设置时钟状态暂停或继续
+		// 设置时钟状态暂停或继续，参数为时钟名称和布尔值，true表示暂停，false表示继续
 		void SetPause(std::string, bool);
-		// 设置刷新率
+		// 设置刷新率，参数为时钟名称和刷新率
 		void SetFramePerSecond(std::string, double);
-		// 设置时间缩放
+		// 设置时间缩放，参数为时钟名称和缩放值
 		void SetFrameScale(std::string, double);
-		// 重置时钟计时器
+		// 重置时钟计时器，参数为时钟名称
 		void ResetClockIns(std::string);
 		//-----------tool-----------
 		// usingned long long计数器与ms计数器转换（Debug）
@@ -164,9 +197,16 @@ namespace TanmiClock
 			auto freq = getCycleAndFreqIns().second;
 			return (time_ull * 1000 / freq);
 		}
-#ifdef CLOCK_EVENT
-
-#endif // CLOCK_EVENT
+#ifdef EVENT_SYSTEM
+		// 添加事件至时钟
+		void AddEvent(std::string, std::string);
+		// 移除事件
+		void RemoveEvent(std::string, std::string);
+		// 获取事件列表
+		std::vector<std::string>& GetEventList(std::string);
+		// 清空事件列表
+		void ClearEventList(std::string);
+#endif // EVENT_SYSTEM
 		void DEBUG(std::string);
 		~Clock() = default;
 	};
@@ -182,7 +222,7 @@ namespace TanmiClock
 		try
 		{
 			if (clockMap.contains(str))
-				throw ClockNameExist();
+				throw ClockNameExistException();
 			if (FPS<0 || FPS>MAX_FRAME_RATE_PER_SECOND)
 				throw ClockOutOfRangeException();
 			auto pair = getCycleAndFreqIns();
@@ -212,7 +252,7 @@ namespace TanmiClock
 				}
 			}
 			if (c == clockMap.end())
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 		}
 		catch (ClockException& exp)
 		{
@@ -232,7 +272,7 @@ namespace TanmiClock
 		try
 		{
 			if (e.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 		}
 		catch (ClockException& exp)
 		{
@@ -247,7 +287,7 @@ namespace TanmiClock
 		try
 		{
 			if (e.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 			unsigned long long elapsed_cycles = this->getCycleNow(e) - e->ins_cycle;
 			unsigned long long freq = getFreqNow(e);
 			return (elapsed_cycles * 1000) / freq;
@@ -265,7 +305,7 @@ namespace TanmiClock
 		try
 		{
 			if (e.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 			unsigned long long elapsed_cycles =
 				e->relative_tick + (this->getCycleNow(e) - e->cycle) * e->scale;
 			unsigned long long freq = getFreqNow(e);
@@ -284,7 +324,7 @@ namespace TanmiClock
 		try
 		{
 			if (e.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 			unsigned long long elapsed_cycles = e->cycle - e->last_cycle;
 			unsigned long long freq = getFreqNow(e);
 			return (elapsed_cycles * 1000) / (double)freq;
@@ -302,7 +342,7 @@ namespace TanmiClock
 		try
 		{
 			if (e.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 			unsigned long long elapsed_cycles = e->cycle - e->last_cycle;
 			unsigned long long freq = getFreqNow(e);
 			return (elapsed_cycles * 1000) / (double)freq * e->scale;
@@ -320,7 +360,7 @@ namespace TanmiClock
 		try
 		{
 			if (e.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 			if (is_pause == e->pause)
 			{
 				return;
@@ -352,7 +392,7 @@ namespace TanmiClock
 		try
 		{
 			if (e.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 			else if (i<MIN_FRAME_RATE_PER_SECOND || i>MAX_FRAME_RATE_PER_SECOND)
 				throw ClockOutOfRangeException();
 			std::lock_guard<std::mutex> lock(e->lock);
@@ -370,7 +410,7 @@ namespace TanmiClock
 		try
 		{
 			if (e.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 			else if (s < MIN_SCALE || s > MAX_SCALE)
 				throw ClockOutOfRangeException();
 			std::lock_guard<std::mutex> lock(e->lock);
@@ -388,7 +428,7 @@ namespace TanmiClock
 		try
 		{
 			if (e.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 			std::lock_guard<std::mutex> lock(e->lock);
 			e->ins_cycle = this->getCycleNow(e);
 			e->relative_tick = 0;
@@ -447,7 +487,7 @@ namespace TanmiClock
 		{
 			i = getIterator(str);
 			if (i.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 			std::lock_guard<std::mutex> lock(i->templock);
 			QueryPerformanceCounter(&i->temp_lint);
 			i->temp_ull = i->temp_lint.QuadPart;
@@ -466,7 +506,7 @@ namespace TanmiClock
 		try
 		{
 			if (i.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 			std::lock_guard<std::mutex> lock(i->templock);
 			QueryPerformanceCounter(&i->temp_lint);
 			i->temp_ull = i->temp_lint.QuadPart;
@@ -487,7 +527,7 @@ namespace TanmiClock
 		{
 			i = getIterator(str);
 			if (i.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 
 			std::lock_guard<std::mutex> lock(i->templock);
 			QueryPerformanceFrequency(&i->temp_lint);
@@ -508,7 +548,7 @@ namespace TanmiClock
 		try
 		{
 			if (i.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 
 			std::lock_guard<std::mutex> lock(i->templock);
 			QueryPerformanceFrequency(&i->temp_lint);
@@ -531,7 +571,7 @@ namespace TanmiClock
 		{
 			i = getIterator(str);
 			if (i.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 
 			if (i->pause == true)
 			{
@@ -544,6 +584,13 @@ namespace TanmiClock
 				i->last_cycle = i->cycle;
 				i->cycle = i->temp_lint.QuadPart;
 				i->relative_tick += (i->cycle - i->last_cycle) * i->scale;
+#ifdef EVENT_SYSTEM
+				EventSystem& eventSystem = EventSystem::Instance();
+				for (auto e : i->eventList)
+				{
+					eventSystem.TriggerEventUpdate(e, i->relative_tick);
+				}
+#endif // EVENT_SYSTEM
 				return true;
 			}
 			else
@@ -563,7 +610,7 @@ namespace TanmiClock
 		try
 		{
 			if (i.get() == nullptr)
-				throw ClockNoFoundException();
+				throw ClockNotFoundException();
 
 			if (i->pause == true)
 			{
@@ -576,6 +623,13 @@ namespace TanmiClock
 				i->last_cycle = i->cycle;
 				i->cycle = i->temp_lint.QuadPart;
 				i->relative_tick += (i->cycle - i->last_cycle) * i->scale;
+#ifdef EVENT_SYSTEM
+				EventSystem& eventSystem = EventSystem::Instance();
+				for (auto e : i->eventList)
+				{
+					eventSystem.TriggerEventUpdate(e, i->relative_tick);
+				}
+#endif // EVENT_SYSTEM
 				return true;
 			}
 			else
@@ -589,4 +643,86 @@ namespace TanmiClock
 		}
 		return false;
 	}
+
+#ifdef EVENT_SYSTEM
+	inline void Clock::AddEvent(std::string str, std::string event)
+	{
+		std::shared_ptr<ClockElem> i(nullptr);
+		try
+		{
+			i = getIterator(str);
+			if (i.get() == nullptr)
+				throw ClockNotFoundException();
+			EventSystem& eventsystem = EventSystem::Instance();
+			if (eventsystem.IsEventExistNoException(event) == false)
+				throw ClockEventNotFoundException();
+			std::lock_guard<std::mutex> lock(i->lock);
+			i->eventList.push_back(event);
+		}
+		catch (ClockException& exp)
+		{
+			std::cout << "\n::Clock::AddEvent()" << exp.what() << std::endl;
+		}
+	}
+
+	inline void Clock::RemoveEvent(std::string str, std::string event)
+	{
+		std::shared_ptr<ClockElem> i(nullptr);
+		try
+		{
+			if (i.get() == nullptr)
+				throw ClockNotFoundException();
+			EventSystem& eventsystem = EventSystem::Instance();
+			if (eventsystem.IsEventExistNoException(event) == false)
+				throw ClockEventNotFoundException();
+			bool isExist = false;
+			std::lock_guard<std::mutex> lock(i->lock);
+			for (auto e = i->eventList.begin(); e != i->eventList.end(); ++e)
+			{
+				if (*e == event)
+				{
+					isExist = true;
+					i->eventList.erase(e);
+					break;
+				}
+			}
+			if (isExist == false)
+				throw ClockEventNotFoundException();
+		}
+		catch (ClockException& exp)
+		{
+			std::cout << "\n::Clock::AddEvent()" << exp.what() << std::endl;
+		}
+	}
+
+	inline std::vector<std::string>& Clock::GetEventList(std::string str)
+	{
+		std::shared_ptr<ClockElem> i(nullptr);
+		try
+		{
+			if (i.get() == nullptr)
+				throw ClockNotFoundException();
+			return i->eventList;
+		}
+		catch (ClockException& exp)
+		{
+			std::cout << "\n::Clock::GetEventList()" << exp.what() << std::endl;
+		}
+	}
+
+	inline void Clock::ClearEventList(std::string)
+	{
+		std::shared_ptr<ClockElem> i(nullptr);
+		try
+		{
+			if (i.get() == nullptr)
+				throw ClockNotFoundException();
+			i->eventList.clear();
+		}
+		catch (ClockException& exp)
+		{
+			std::cout << "\n::Clock::GetEventList()" << exp.what() << std::endl;
+		}
+	}
+#endif // EVENT_SYSTEM
 }
