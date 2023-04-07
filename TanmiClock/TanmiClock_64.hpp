@@ -169,19 +169,21 @@ namespace TanmiEngine
 		bool CopyClock(std::string, std::string);
 		//----------getFunction----------
 		// 获取时钟是否超过更新点，是则更新时钟，参数为时钟名称
-		bool GetUpdate(std::string);
+		bool GetUpdate(std::string)const;
+		// 获取时钟是否暂停，参数为时钟名称
+		bool GetPause(std::string)const;
 		// 获取时钟刷新率，参数为时钟名称
-		int GetFramePerSecond(std::string);
+		int GetFramePerSecond(std::string)const;
 		// 获取时钟自创建以来经过的绝对时长，参数为时钟名称
-		int GetElapsed(std::string);
+		int GetElapsed(std::string)const;
 		// 获取时钟自上一刷新节点经过的绝对时长，参数为时钟名称
-		double GetTick(std::string);
+		double GetTick(std::string)const;
 		// 获取时钟自创建以来经过的相对时长，参数为时钟名称
-		int GetElapsedRelative(std::string);
+		int GetElapsedRelative(std::string)const;
 		// 获取时钟自上一刷新节点经过的相对时长，参数为时钟名称
-		double GetTickRelative(std::string);
+		double GetTickRelative(std::string)const;
 		//----------setFunction----------
-		// 设置时钟状态暂停或继续，参数为时钟名称和布尔值，true表示暂停，false表示继续
+		// 设置时钟暂停状态，参数为时钟名称和布尔值，true表示暂停，false表示继续
 		void SetPause(std::string, bool);
 		// 设置刷新率，参数为时钟名称和刷新率
 		void SetFramePerSecond(std::string, double);
@@ -279,12 +281,27 @@ namespace TanmiEngine
 		return false;
 	}
 
-	inline bool Clock::GetUpdate(std::string str = "Golbal")
+	inline bool Clock::GetUpdate(std::string str = "Golbal")const
 	{
 		return this->isUpdate(str);
 	}
 
-	inline int Clock::GetFramePerSecond(std::string str = "Golbal")
+	inline bool Clock::GetPause(std::string)const
+	{
+		auto e = this->getIterator(str);
+		try
+		{
+			if (e.get() == nullptr)
+				throw ClockNotFoundException();
+		}
+		catch (ClockException& exp)
+		{
+			std::cout << "\n::Clock::GetFramePerSecond()" << exp.what() << std::endl;
+		}
+		return e->pause;
+	}
+
+	inline int Clock::GetFramePerSecond(std::string str = "Golbal")const
 	{
 		auto e = this->getIterator(str);
 		try
@@ -299,7 +316,7 @@ namespace TanmiEngine
 		return static_cast<int>(this->getFreqNow(e) / e->update_tick);
 	}
 
-	inline int Clock::GetElapsed(std::string str = "Golbal")
+	inline int Clock::GetElapsed(std::string str = "Golbal")const
 	{
 		auto e = this->getIterator(str);
 		try
@@ -317,7 +334,7 @@ namespace TanmiEngine
 		return 0;
 	}
 
-	inline int Clock::GetElapsedRelative(std::string str = "Golbal")
+	inline int Clock::GetElapsedRelative(std::string str = "Golbal")const
 	{
 		auto e = this->getIterator(str);
 		try
@@ -336,7 +353,7 @@ namespace TanmiEngine
 		return 0;
 	}
 
-	inline double Clock::GetTick(std::string str = "Golbal")
+	inline double Clock::GetTick(std::string str = "Golbal")const
 	{
 		auto e = this->getIterator(str);
 		try
@@ -354,7 +371,7 @@ namespace TanmiEngine
 		return 0.0f;
 	}
 
-	inline double Clock::GetTickRelative(std::string str = "Golbal")
+	inline double Clock::GetTickRelative(std::string str = "Golbal")const
 	{
 		auto e = this->getIterator(str);
 		try
