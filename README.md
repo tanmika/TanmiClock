@@ -129,11 +129,7 @@ class Clock
 		void ResetClockIns(std::string);
 		//-----------tool-----------
 		// usingned long long计数器与ms计数器转换（Debug）
-		inline int ull2ms_freq(ull time_ull)
-		{
-			auto freq = getCycleAndFreqIns().second;
-			return (time_ull * 1000 / freq);
-		}
+		inline int ull2ms_freq(ull time_ull)；
 
 		// 以下内容需包含事件系统以启用
 			// 添加事件至时钟
