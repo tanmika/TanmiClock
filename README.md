@@ -76,20 +76,20 @@ class Clock
 	private:
 		//----------tool----------
 		// 获取时钟对象指针，失败时返回nullptr
-		inline std::shared_ptr<ClockElem> getIterator(std::string);
+		inline std::shared_ptr<ClockElem> getIterator(const std::string&);
 		// 获取ull时钟计数与频率，使用类内缓冲
 		inline std::pair<ull, ull> getCycleAndFreqIns();
 		// 获取ull时钟计数，使用元素缓冲
-		inline ull& getCycleNow(std::string);
+		inline ull& getCycleNow(const std::string&);
 		// 获取ull时钟计数，使用元素缓冲
 		inline ull& getCycleNow(std::shared_ptr<ClockElem>);
 		// 获取ull时钟频率，使用元素缓冲
-		inline ull& getFreqNow(std::string);
+		inline ull& getFreqNow(const std::string&);
 		// 获取ull时钟频率，使用元素缓冲
 		inline ull& getFreqNow(std::shared_ptr<ClockElem>);
 		//----------function----------
 		// 获取时钟是否超过更新点，是则更新时钟
-		inline bool isUpdate(std::string);
+		inline bool isUpdate(const std::string&);
 		// 获取时钟是否超过更新点，是则更新时钟
 		inline bool isUpdate(std::shared_ptr<ClockElem>);
 
@@ -98,50 +98,50 @@ class Clock
 		static Clock& Instance();
 		//----------elemFunction----------
 		// 新建时钟，参数为时钟名称和刷新率
-		bool NewClock(std::string, double);
+		bool NewClock(const std::string&, double);
 		// 移除时钟，参数为时钟名称
-		bool EraseClock(std::string);
+		bool EraseClock(const std::string&);
 		// 复制时钟，参数为时钟名称和新时钟名称
-		bool CopyClock(std::string, std::string);
+		bool CopyClock(const std::string&, const std::string&);
 		//----------getFunction----------
 		// 获取时钟是否超过更新点，是则更新时钟，参数为时钟名称
-		bool GetUpdate(std::string)const;
+		bool GetUpdate(const std::string&);
 		// 获取时钟是否暂停，参数为时钟名称
-		bool GetPause(std::string)const;
+		bool GetPause(const std::string&);
 		// 获取时钟刷新率，参数为时钟名称
-		int GetFramePerSecond(std::string)const;
+		double GetFramePerSecond(const std::string&);
 		// 获取时钟自创建以来经过的绝对时长，参数为时钟名称
-		int GetElapsed(std::string)const;
+		int GetElapsed(const std::string&);
 		// 获取时钟自上一刷新节点经过的绝对时长，参数为时钟名称
-		double GetTick(std::string)const;
+		double GetTick(const std::string&);
 		// 获取时钟自创建以来经过的相对时长，参数为时钟名称
-		int GetElapsedRelative(std::string)const;
+		int GetElapsedRelative(const std::string&);
 		// 获取时钟自上一刷新节点经过的相对时长，参数为时钟名称
-		double GetTickRelative(std::string)const;
+		double GetTickRelative(const std::string&);
 		//----------setFunction----------
 		// 设置时钟状态暂停或继续，参数为时钟名称和布尔值，true表示暂停，false表示继续
-		void SetPause(std::string, bool);
+		void SetPause(const std::string&, bool);
 		// 设置刷新率，参数为时钟名称和刷新率
-		void SetFramePerSecond(std::string, double);
+		void SetFramePerSecond(const std::string&, double);
 		// 设置时间缩放，参数为时钟名称和缩放值
-		void SetFrameScale(std::string, double);
+		void SetFrameScale(const std::string&, double);
 		// 重置时钟计时器，参数为时钟名称
-		void ResetClockIns(std::string);
+		void ResetClockIns(const std::string&);
 		//-----------tool-----------
 		// usingned long long计数器与ms计数器转换（Debug）
 		inline int ull2ms_freq(ull time_ull)；
 
 		// 以下内容需包含事件系统以启用
 			// 添加事件至时钟
-			void AddEvent(std::string, std::string);
+			void AddEvent(const std::string&, const std::string&);
 			// 移除事件
-			void RemoveEvent(std::string, std::string);
+			void RemoveEvent(const std::string&, const std::string&);
 			// 获取事件列表
-			std::vector<std::string>& GetEventList(std::string);
+			std::vector<std::string>& GetEventList(const std::string&);
 			// 清空事件列表
-			void ClearEventList(std::string);
+			void ClearEventList(const std::string&);
 
-		void DEBUG(std::string);
+		void DEBUG(const std::string&);
 		...
 	};
 ```
