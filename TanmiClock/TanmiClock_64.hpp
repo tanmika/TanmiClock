@@ -175,11 +175,11 @@ namespace TanmiEngine
 		// 获取时钟刷新率，参数为时钟名称
 		double GetFramePerSecond(const std::string&);
 		// 获取时钟自创建以来经过的绝对时长，参数为时钟名称
-		int GetElapsed(const std::string&);
+		double GetElapsed(const std::string&);
 		// 获取时钟自上一刷新节点经过的绝对时长，参数为时钟名称
 		double GetTick(const std::string&);
 		// 获取时钟自创建以来经过的相对时长，参数为时钟名称
-		int GetElapsedRelative(const std::string&);
+		double GetElapsedRelative(const std::string&);
 		// 获取时钟自上一刷新节点经过的相对时长，参数为时钟名称
 		double GetTickRelative(const std::string&);
 		//----------setFunction----------
@@ -316,7 +316,7 @@ namespace TanmiEngine
 		return (this->getFreqNow(e) / e->update_tick);
 	}
 
-	inline int Clock::GetElapsed(const std::string& str = "Golbal")
+	inline double Clock::GetElapsed(const std::string& str = "Golbal")
 	{
 		auto e = this->getIterator(str);
 		try
@@ -334,7 +334,7 @@ namespace TanmiEngine
 		return 0;
 	}
 
-	inline int Clock::GetElapsedRelative(const std::string& str = "Golbal")
+	inline double Clock::GetElapsedRelative(const std::string& str = "Golbal")
 	{
 		auto e = this->getIterator(str);
 		try

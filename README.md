@@ -18,7 +18,7 @@
 	clk.CopyClock("test", "clk");
 
 	// 获取时钟test的刷新率
-	int fps = clk.GetFramePerSecond("test");
+	double fps = clk.GetFramePerSecond("test");
 	// 设置时钟test的刷新率
 	clk.SetFramePerSecond("test", 30);
 
@@ -35,7 +35,7 @@
 	bool isUpdate = clk.GetUpdate("test");
 
 	// 获取时钟test自创建以来经过的绝对时长
-	int elapsed = clk.GetElapsed("test");
+	double elapsed = clk.GetElapsed("test");
 	// 获取时钟test自上一刷新节点经过的绝对时长
 	double tick = clk.GetTick("test");
 
@@ -45,7 +45,7 @@
 	clk.SetFrameScale("test", 0.5);
 
 	// 获取时钟test自创建以来经过的相对时长
-	int elapsedRelative = clk.GetElapsedRelative("test");
+	double elapsedRelative = clk.GetElapsedRelative("test");
 	// 获取时钟test自上一刷新节点经过的相对时长
 	double tickRelative = clk.GetTickRelative("test");
 
@@ -111,11 +111,11 @@ class Clock
 		// 获取时钟刷新率，参数为时钟名称
 		double GetFramePerSecond(const std::string&);
 		// 获取时钟自创建以来经过的绝对时长，参数为时钟名称
-		int GetElapsed(const std::string&);
+		double GetElapsed(const std::string&);
 		// 获取时钟自上一刷新节点经过的绝对时长，参数为时钟名称
 		double GetTick(const std::string&);
 		// 获取时钟自创建以来经过的相对时长，参数为时钟名称
-		int GetElapsedRelative(const std::string&);
+		double GetElapsedRelative(const std::string&);
 		// 获取时钟自上一刷新节点经过的相对时长，参数为时钟名称
 		double GetTickRelative(const std::string&);
 		//----------setFunction----------
