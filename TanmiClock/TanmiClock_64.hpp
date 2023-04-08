@@ -139,21 +139,21 @@ namespace TanmiEngine
 		Clock& operator=(Clock&&) = delete;
 		//----------tool----------
 		// 获取时钟对象指针，失败时返回nullptr
-		inline std::shared_ptr<ClockElem> getIterator(std::string);
+		inline std::shared_ptr<ClockElem> getIterator(const std::string&);
 		// 获取ull时钟计数与频率，使用类内缓冲
 		inline std::pair<ull, ull> getCycleAndFreqIns();
 		// 获取ull时钟计数，使用元素缓冲
-		inline ull& getCycleNow(std::string);
+		inline ull& getCycleNow(const std::string&);
 		// 获取ull时钟计数，使用元素缓冲
 		inline ull& getCycleNow(std::shared_ptr<ClockElem>);
 		// 获取ull时钟频率，使用元素缓冲
-		inline ull& getFreqNow(std::string);
+		inline ull& getFreqNow(const std::string&);
 		// 获取ull时钟频率，使用元素缓冲
 		inline ull& getFreqNow(std::shared_ptr<ClockElem>);
 
 		//----------function----------
 		// 获取时钟是否超过更新点，是则更新时钟
-		inline bool isUpdate(std::string);
+		inline bool isUpdate(const std::string&);
 		// 获取时钟是否超过更新点，是则更新时钟
 		inline bool isUpdate(std::shared_ptr<ClockElem>);
 
@@ -162,35 +162,35 @@ namespace TanmiEngine
 		static Clock& Instance();
 		//----------elemFunction----------
 		// 新建时钟，参数为时钟名称和刷新率
-		bool NewClock(std::string, double);
+		bool NewClock(const std::string&, double);
 		// 移除时钟，参数为时钟名称
-		bool EraseClock(std::string);
+		bool EraseClock(const std::string&);
 		// 复制时钟，参数为时钟名称和新时钟名称
-		bool CopyClock(std::string, std::string);
+		bool CopyClock(const std::string&, const std::string&);
 		//----------getFunction----------
 		// 获取时钟是否超过更新点，是则更新时钟，参数为时钟名称
-		bool GetUpdate(std::string)const;
+		bool GetUpdate(const std::string&);
 		// 获取时钟是否暂停，参数为时钟名称
-		bool GetPause(std::string)const;
+		bool GetPause(const std::string&);
 		// 获取时钟刷新率，参数为时钟名称
-		int GetFramePerSecond(std::string)const;
+		double GetFramePerSecond(const std::string&);
 		// 获取时钟自创建以来经过的绝对时长，参数为时钟名称
-		int GetElapsed(std::string)const;
+		int GetElapsed(const std::string&);
 		// 获取时钟自上一刷新节点经过的绝对时长，参数为时钟名称
-		double GetTick(std::string)const;
+		double GetTick(const std::string&);
 		// 获取时钟自创建以来经过的相对时长，参数为时钟名称
-		int GetElapsedRelative(std::string)const;
+		int GetElapsedRelative(const std::string&);
 		// 获取时钟自上一刷新节点经过的相对时长，参数为时钟名称
-		double GetTickRelative(std::string)const;
+		double GetTickRelative(const std::string&);
 		//----------setFunction----------
 		// 设置时钟暂停状态，参数为时钟名称和布尔值，true表示暂停，false表示继续
-		void SetPause(std::string, bool);
+		void SetPause(const std::string&, bool);
 		// 设置刷新率，参数为时钟名称和刷新率
-		void SetFramePerSecond(std::string, double);
+		void SetFramePerSecond(const std::string&, double);
 		// 设置时间缩放，参数为时钟名称和缩放值
-		void SetFrameScale(std::string, double);
+		void SetFrameScale(const std::string&, double);
 		// 重置时钟计时器，参数为时钟名称
-		void ResetClockIns(std::string);
+		void ResetClockIns(const std::string&);
 		//-----------tool-----------
 		// usingned long long计数器与ms计数器转换（Debug）
 		inline int ull2ms_freq(ull time_ull)
@@ -200,15 +200,15 @@ namespace TanmiEngine
 		}
 #ifdef EVENT_SYSTEM
 		// 添加事件至时钟
-		void AddEvent(std::string, std::string);
+		void AddEvent(const std::string&, const std::string&);
 		// 移除事件
-		void RemoveEvent(std::string, std::string);
+		void RemoveEvent(const std::string&, const std::string&);
 		// 获取事件列表
-		std::vector<std::string>& GetEventList(std::string);
+		std::vector<std::string>& GetEventList(const std::string&);
 		// 清空事件列表
-		void ClearEventList(std::string);
+		void ClearEventList(const std::string&);
 #endif // EVENT_SYSTEM
-		void DEBUG(std::string);
+		void DEBUG(const std::string&);
 		~Clock() = default;
 	};
 
@@ -218,7 +218,7 @@ namespace TanmiEngine
 		return clk;
 	}
 
-	inline bool Clock::NewClock(std::string str, double FPS = 60.0f)
+	inline bool Clock::NewClock(const std::string& str, double FPS = 60.0f)
 	{
 		try
 		{
@@ -239,7 +239,7 @@ namespace TanmiEngine
 		return true;
 	}
 
-	inline bool Clock::EraseClock(std::string str)
+	inline bool Clock::EraseClock(const std::string& str)
 	{
 		try
 		{
@@ -262,7 +262,7 @@ namespace TanmiEngine
 		return false;
 	}
 
-	inline bool Clock::CopyClock(std::string str, std::string newclk)
+	inline bool Clock::CopyClock(const std::string& str, const std::string& newclk)
 	{
 		auto e = this->getIterator(str);
 		try
@@ -271,7 +271,7 @@ namespace TanmiEngine
 				throw ClockNameExistException();
 			if (e.get() == nullptr)
 				throw ClockNotFoundException();
-			auto clkelem = std::make_shared<ClockElem>(*e,newclk,getCycleAndFreqIns().first);
+			auto clkelem = std::make_shared<ClockElem>(*e, newclk, getCycleAndFreqIns().first);
 			clockMap[newclk] = clkelem;
 		}
 		catch (ClockException& exp)
@@ -281,12 +281,12 @@ namespace TanmiEngine
 		return false;
 	}
 
-	inline bool Clock::GetUpdate(std::string str = "Golbal")const
+	inline bool Clock::GetUpdate(const std::string& str = "Golbal")
 	{
 		return this->isUpdate(str);
 	}
 
-	inline bool Clock::GetPause(std::string)const
+	inline bool Clock::GetPause(const std::string& str)
 	{
 		auto e = this->getIterator(str);
 		try
@@ -301,7 +301,7 @@ namespace TanmiEngine
 		return e->pause;
 	}
 
-	inline int Clock::GetFramePerSecond(std::string str = "Golbal")const
+	inline double Clock::GetFramePerSecond(const std::string& str = "Golbal")
 	{
 		auto e = this->getIterator(str);
 		try
@@ -313,10 +313,10 @@ namespace TanmiEngine
 		{
 			std::cout << "\n::Clock::GetFramePerSecond()" << exp.what() << std::endl;
 		}
-		return static_cast<int>(this->getFreqNow(e) / e->update_tick);
+		return (this->getFreqNow(e) / e->update_tick);
 	}
 
-	inline int Clock::GetElapsed(std::string str = "Golbal")const
+	inline int Clock::GetElapsed(const std::string& str = "Golbal")
 	{
 		auto e = this->getIterator(str);
 		try
@@ -334,7 +334,7 @@ namespace TanmiEngine
 		return 0;
 	}
 
-	inline int Clock::GetElapsedRelative(std::string str = "Golbal")const
+	inline int Clock::GetElapsedRelative(const std::string& str = "Golbal")
 	{
 		auto e = this->getIterator(str);
 		try
@@ -353,7 +353,7 @@ namespace TanmiEngine
 		return 0;
 	}
 
-	inline double Clock::GetTick(std::string str = "Golbal")const
+	inline double Clock::GetTick(const std::string& str = "Golbal")
 	{
 		auto e = this->getIterator(str);
 		try
@@ -371,7 +371,7 @@ namespace TanmiEngine
 		return 0.0f;
 	}
 
-	inline double Clock::GetTickRelative(std::string str = "Golbal")const
+	inline double Clock::GetTickRelative(const std::string& str = "Golbal")
 	{
 		auto e = this->getIterator(str);
 		try
@@ -389,7 +389,7 @@ namespace TanmiEngine
 		return 0.0f;
 	}
 
-	inline void Clock::SetPause(std::string str, bool is_pause)
+	inline void Clock::SetPause(const std::string& str, bool is_pause)
 	{
 		auto e = this->getIterator(str);
 		try
@@ -421,7 +421,7 @@ namespace TanmiEngine
 		}
 	}
 
-	inline void Clock::SetFramePerSecond(std::string str, double i)
+	inline void Clock::SetFramePerSecond(const std::string& str, double i)
 	{
 		auto e = this->getIterator(str);
 		try
@@ -439,7 +439,7 @@ namespace TanmiEngine
 		}
 	}
 
-	inline void Clock::SetFrameScale(std::string str, double s)
+	inline void Clock::SetFrameScale(const std::string& str, double s)
 	{
 		auto e = this->getIterator(str);
 		try
@@ -457,7 +457,7 @@ namespace TanmiEngine
 		}
 	}
 
-	inline void Clock::ResetClockIns(std::string str)
+	inline void Clock::ResetClockIns(const std::string& str)
 	{
 		auto e = this->getIterator(str);
 		try
@@ -474,7 +474,7 @@ namespace TanmiEngine
 		}
 	}
 
-	inline void Clock::DEBUG(std::string str = "Golbal")
+	inline void Clock::DEBUG(const std::string& str = "Golbal")
 	{
 		auto e = this->getIterator(str);
 		//auto pair = getCycleAndFreqIns();
@@ -496,7 +496,7 @@ namespace TanmiEngine
 		clockMap[str] = clk;
 	}
 
-	inline std::shared_ptr<ClockElem> Clock::getIterator(std::string str)
+	inline std::shared_ptr<ClockElem> Clock::getIterator(const std::string& str)
 	{
 		auto search = clockMap.find(str);
 		if (search != clockMap.end())
@@ -515,7 +515,7 @@ namespace TanmiEngine
 		return std::pair<ull, ull>(temp_ull_clk, temp_lint_clk.QuadPart);
 	}
 
-	inline ull& Clock::getCycleNow(std::string str)
+	inline ull& Clock::getCycleNow(const std::string& str)
 	{
 		std::shared_ptr<ClockElem> i(nullptr);
 		try
@@ -555,7 +555,7 @@ namespace TanmiEngine
 		return void_ull;
 	}
 
-	inline ull& Clock::getFreqNow(std::string str)
+	inline ull& Clock::getFreqNow(const std::string& str)
 	{
 		std::shared_ptr<ClockElem> i(nullptr);
 		try
@@ -599,7 +599,7 @@ namespace TanmiEngine
 		return void_ull;
 	}
 
-	inline bool Clock::isUpdate(std::string str)
+	inline bool Clock::isUpdate(const std::string& str)
 	{
 		std::shared_ptr<ClockElem> i(nullptr);
 		try
@@ -618,12 +618,15 @@ namespace TanmiEngine
 			{
 				i->last_cycle = i->cycle;
 				i->cycle = i->temp_lint.QuadPart;
-				i->relative_tick += (i->cycle - i->last_cycle) * i->scale;
+				auto relative_passed = (i->cycle - i->last_cycle) * i->scale;
+				i->relative_tick += relative_passed;
 #ifdef EVENT_SYSTEM
 				EventSystem& eventSystem = EventSystem::Instance();
+				QueryPerformanceFrequency(&i->temp_lint);
+				auto freq = i->temp_lint.QuadPart;
 				for (auto e : i->eventList)
 				{
-					eventSystem.TriggerEventUpdate(e, i->relative_tick);
+					eventSystem.TriggerEventUpdate(e, relative_passed * 1000 / freq);
 				}
 #endif // EVENT_SYSTEM
 				return true;
@@ -657,12 +660,15 @@ namespace TanmiEngine
 			{
 				i->last_cycle = i->cycle;
 				i->cycle = i->temp_lint.QuadPart;
-				i->relative_tick += (i->cycle - i->last_cycle) * i->scale;
+				auto relative_passed = (i->cycle - i->last_cycle) * i->scale;
+				i->relative_tick += relative_passed;
 #ifdef EVENT_SYSTEM
 				EventSystem& eventSystem = EventSystem::Instance();
+				QueryPerformanceFrequency(&i->temp_lint);
+				auto freq = i->temp_lint.QuadPart;
 				for (auto e : i->eventList)
 				{
-					eventSystem.TriggerEventUpdate(e, i->relative_tick);
+					eventSystem.TriggerEventUpdate(e, relative_passed * 1000 / freq);
 				}
 #endif // EVENT_SYSTEM
 				return true;
@@ -680,7 +686,7 @@ namespace TanmiEngine
 	}
 
 #ifdef EVENT_SYSTEM
-	inline void Clock::AddEvent(std::string str, std::string event)
+	inline void Clock::AddEvent(const std::string& str, const std::string& event)
 	{
 		std::shared_ptr<ClockElem> i(nullptr);
 		try
@@ -700,7 +706,7 @@ namespace TanmiEngine
 		}
 	}
 
-	inline void Clock::RemoveEvent(std::string str, std::string event)
+	inline void Clock::RemoveEvent(const std::string& str, const std::string& event)
 	{
 		std::shared_ptr<ClockElem> i(nullptr);
 		try
@@ -730,7 +736,7 @@ namespace TanmiEngine
 		}
 	}
 
-	inline std::vector<std::string>& Clock::GetEventList(std::string str)
+	inline std::vector<std::string>& Clock::GetEventList(const std::string& str)
 	{
 		std::shared_ptr<ClockElem> i(nullptr);
 		try
@@ -745,7 +751,7 @@ namespace TanmiEngine
 		}
 	}
 
-	inline void Clock::ClearEventList(std::string)
+	inline void Clock::ClearEventList(const std::string&)
 	{
 		std::shared_ptr<ClockElem> i(nullptr);
 		try
