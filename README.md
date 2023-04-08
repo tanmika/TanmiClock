@@ -1,9 +1,25 @@
 # TanmiClock
-## 2023.4.8 update
+## 2023.4.9 update
 
-一个自建引擎的简单时钟库，基于C++20 & VS2022
+TanmiClock是一个基于单例模式的简单时钟系统，使用mutex保证线程安全。
 
-*部分功能需要包含事件系统库以启用*
+通过本系统，用户可以创建时钟实例并管理其设置，例如复制、获取和设置其帧率、暂停和取消暂停时钟、获取其经过的时间以及重置时钟。
+
+在包含事件系统库[TanmiEventSystem](https://github.com/tanmika/TanmiEventSystem)后，还可以实现通过时钟唤起事件更新功能。
+
+### 依赖
+
+src文件夹下包含：
+- TanmiClock_64.hpp
+时钟系统
+
+demo文件夹下包含：
+- TanmiClock.sln
+演示项目
+
+将TanmiClock_64.hpp包含至项目中即可使用，调用时需使用命名空间TanmiEngine
+
+注意，在使用该项目时需要支持 C++20 特性的编译器。
 
 ### 用法
 
