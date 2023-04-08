@@ -104,11 +104,13 @@ auto showDemo(std::string& str) -> int
 		}
 		if (clk.GetElapsed(str) - begin >= time * 400 && set_pause == 0)
 		{
+			std::cout << "PAUSE!\n";
 			clk.SetPause(str3, true);
 			++set_pause;
 		}
 		if (clk.GetElapsed(str) - begin >= time * 600 && set_pause == 1)
 		{
+			std::cout << "CONTINUE!\n";
 			clk.SetPause(str3, false);
 			++set_pause;
 		}
