@@ -711,11 +711,10 @@ namespace TanmiEngine
 		std::shared_ptr<ClockElem> i(nullptr);
 		try
 		{
+			i = getIterator(str);
 			if (i.get() == nullptr)
 				throw ClockNotFoundException();
 			EventSystem& eventsystem = EventSystem::Instance();
-			if (eventsystem.IsEventExistNoException(event) == false)
-				throw ClockEventNotFoundException();
 			bool isExist = false;
 			std::lock_guard<std::mutex> lock(i->lock);
 			for (auto e = i->eventList.begin(); e != i->eventList.end(); ++e)
@@ -732,7 +731,7 @@ namespace TanmiEngine
 		}
 		catch (ClockException& exp)
 		{
-			std::cout << "\n::Clock::AddEvent()" << exp.what() << std::endl;
+			std::cout << "\n::Clock::RemoveEvent()" << exp.what() << std::endl;
 		}
 	}
 
