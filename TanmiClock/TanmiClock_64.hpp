@@ -281,7 +281,7 @@ namespace TanmiEngine
 		return false;
 	}
 
-	inline bool Clock::GetUpdate(const std::string& str = "Golbal")
+	inline bool Clock::GetUpdate(const std::string& str = "Global")
 	{
 		return this->isUpdate(str);
 	}
@@ -301,7 +301,7 @@ namespace TanmiEngine
 		return e->pause;
 	}
 
-	inline double Clock::GetFramePerSecond(const std::string& str = "Golbal")
+	inline double Clock::GetFramePerSecond(const std::string& str = "Global")
 	{
 		auto e = this->getIterator(str);
 		try
@@ -316,7 +316,7 @@ namespace TanmiEngine
 		return (this->getFreqNow(e) / e->update_tick);
 	}
 
-	inline double Clock::GetElapsed(const std::string& str = "Golbal")
+	inline double Clock::GetElapsed(const std::string& str = "Global")
 	{
 		auto e = this->getIterator(str);
 		try
@@ -334,7 +334,7 @@ namespace TanmiEngine
 		return 0;
 	}
 
-	inline double Clock::GetElapsedRelative(const std::string& str = "Golbal")
+	inline double Clock::GetElapsedRelative(const std::string& str = "Global")
 	{
 		auto e = this->getIterator(str);
 		try
@@ -353,7 +353,7 @@ namespace TanmiEngine
 		return 0;
 	}
 
-	inline double Clock::GetTick(const std::string& str = "Golbal")
+	inline double Clock::GetTick(const std::string& str = "Global")
 	{
 		auto e = this->getIterator(str);
 		try
@@ -371,7 +371,7 @@ namespace TanmiEngine
 		return 0.0f;
 	}
 
-	inline double Clock::GetTickRelative(const std::string& str = "Golbal")
+	inline double Clock::GetTickRelative(const std::string& str = "Global")
 	{
 		auto e = this->getIterator(str);
 		try
@@ -474,7 +474,7 @@ namespace TanmiEngine
 		}
 	}
 
-	inline void Clock::DEBUG(const std::string& str = "Golbal")
+	inline void Clock::DEBUG(const std::string& str = "Global")
 	{
 		auto e = this->getIterator(str);
 		//auto pair = getCycleAndFreqIns();
@@ -489,7 +489,7 @@ namespace TanmiEngine
 
 	Clock::Clock()
 	{
-		std::string str("Golbal");
+		std::string str("Global");
 		auto pair = getCycleAndFreqIns();
 		std::shared_ptr<ClockElem> clk = std::make_shared<ClockElem>
 			(str, pair.first, 1.0f / 60.0f * pair.second, 1.0f, false);

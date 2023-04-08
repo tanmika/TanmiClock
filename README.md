@@ -8,7 +8,7 @@
 ### 用法
 
 ```c++
-	// 获得时钟实例引用，默认自带一个时钟对象"Golbal"
+	// 获得时钟实例引用，默认自带一个时钟对象"Global"
 	Clock& clk = Clock::Instance();
 
 	// 新建时钟test

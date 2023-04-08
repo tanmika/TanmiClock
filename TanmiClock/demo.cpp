@@ -10,7 +10,7 @@ auto showDemo(std::string&) -> int;
 auto main() -> int
 {
 	Clock& clk = Clock::Instance();
-	clk.SetFramePerSecond("Golbal", 5);
+	clk.SetFramePerSecond("Global", 5);
 	std::cout << clk.GetFramePerSecond() << std::endl;
 
 	std::string str1("democlk1");
