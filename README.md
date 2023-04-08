@@ -1,5 +1,6 @@
 # TanmiClock
-## 2023.4.9 update
+##
+### 2023.4.9 update
 
 TanmiClock是一个基于单例模式的简单时钟系统，使用mutex保证线程安全。
 
@@ -7,7 +8,7 @@ TanmiClock是一个基于单例模式的简单时钟系统，使用mutex保证�
 
 在包含事件系统库[TanmiEventSystem](https://github.com/tanmika/TanmiEventSystem)后，还可以实现通过时钟唤起事件更新功能。
 
-### 依赖
+## 依赖
 
 src文件夹下包含：
 - TanmiClock_64.hpp
@@ -21,7 +22,7 @@ demo文件夹下包含：
 
 注意，在使用该项目时需要支持 C++20 特性的编译器。
 
-### 用法
+## 用法
 
 ```c++
 	// 获得时钟实例引用，默认自带一个时钟对象"Global"
@@ -83,7 +84,7 @@ demo文件夹下包含：
 ```
 
 
-### 结构
+## 结构
 
 ```c++
 class Clock
