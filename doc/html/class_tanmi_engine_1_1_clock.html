@@ -1,0 +1,967 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TanmiClock: TanmiEngine::Clock类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TanmiClock
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="inherits.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_tanmi_engine.html">TanmiEngine</a></li><li class="navelem"><a class="el" href="class_tanmi_engine_1_1_clock.html">Clock</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="class_tanmi_engine_1_1_clock-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">TanmiEngine::Clock类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>该类定义了一个基于帧计数的计时器系统  
+ <a href="class_tanmi_engine_1_1_clock.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8af176f2d350e68d09c4909d667d591e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a8af176f2d350e68d09c4909d667d591e">NewClock</a> (const std::string &amp;_name, double _fps)</td></tr>
+<tr class="memdesc:a8af176f2d350e68d09c4909d667d591e"><td class="mdescLeft">&#160;</td><td class="mdescRight">新建时钟  <br /></td></tr>
+<tr class="separator:a8af176f2d350e68d09c4909d667d591e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991af0411fd768ec4318e9ad82e486d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a991af0411fd768ec4318e9ad82e486d5">EraseClock</a> (const std::string &amp;_name)</td></tr>
+<tr class="memdesc:a991af0411fd768ec4318e9ad82e486d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除时钟  <br /></td></tr>
+<tr class="separator:a991af0411fd768ec4318e9ad82e486d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c3afafba4ae06d3fd511dd15d436799"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a6c3afafba4ae06d3fd511dd15d436799">CopyClock</a> (const std::string &amp;_name, const std::string &amp;newclk)</td></tr>
+<tr class="memdesc:a6c3afafba4ae06d3fd511dd15d436799"><td class="mdescLeft">&#160;</td><td class="mdescRight">复制时钟  <br /></td></tr>
+<tr class="separator:a6c3afafba4ae06d3fd511dd15d436799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2440ac71fa8ec05aeafacab463dd4e52"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a2440ac71fa8ec05aeafacab463dd4e52">GetUpdate</a> (const std::string &amp;_name)</td></tr>
+<tr class="memdesc:a2440ac71fa8ec05aeafacab463dd4e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取时钟是否超过更新点，是则更新时钟  <br /></td></tr>
+<tr class="separator:a2440ac71fa8ec05aeafacab463dd4e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a774162e60dbca15d27dc89a786fb108e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a774162e60dbca15d27dc89a786fb108e">GetPause</a> (const std::string &amp;_name)</td></tr>
+<tr class="memdesc:a774162e60dbca15d27dc89a786fb108e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取时钟是否暂停  <br /></td></tr>
+<tr class="separator:a774162e60dbca15d27dc89a786fb108e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e8f50903b8ce027e9c933ddbdbb1a44"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a9e8f50903b8ce027e9c933ddbdbb1a44">GetFramePerSecond</a> (const std::string &amp;_name)</td></tr>
+<tr class="memdesc:a9e8f50903b8ce027e9c933ddbdbb1a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取时钟刷新率  <br /></td></tr>
+<tr class="separator:a9e8f50903b8ce027e9c933ddbdbb1a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95a060463ce8fa31c9214f086057746e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a95a060463ce8fa31c9214f086057746e">GetElapsed</a> (const std::string &amp;_name)</td></tr>
+<tr class="memdesc:a95a060463ce8fa31c9214f086057746e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取时钟自创建以来经过的绝对时长  <br /></td></tr>
+<tr class="separator:a95a060463ce8fa31c9214f086057746e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed7e66e35d3042f53c3d7290d3b05bd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a5ed7e66e35d3042f53c3d7290d3b05bd">GetTick</a> (const std::string &amp;_name)</td></tr>
+<tr class="memdesc:a5ed7e66e35d3042f53c3d7290d3b05bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取时钟自上一刷新节点经过的绝对时长  <br /></td></tr>
+<tr class="separator:a5ed7e66e35d3042f53c3d7290d3b05bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e7591dacf1d286313c33491ddae233"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a79e7591dacf1d286313c33491ddae233">GetElapsedRelative</a> (const std::string &amp;_name)</td></tr>
+<tr class="memdesc:a79e7591dacf1d286313c33491ddae233"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取时钟自创建以来经过的相对时长  <br /></td></tr>
+<tr class="separator:a79e7591dacf1d286313c33491ddae233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c25e03a86326559832a36b9d71b99d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a37c25e03a86326559832a36b9d71b99d">GetTickRelative</a> (const std::string &amp;_name)</td></tr>
+<tr class="memdesc:a37c25e03a86326559832a36b9d71b99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取时钟自上一刷新节点经过的相对时长  <br /></td></tr>
+<tr class="separator:a37c25e03a86326559832a36b9d71b99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7915a9f3ccd68ee110a7f81edf456955"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a7915a9f3ccd68ee110a7f81edf456955">SetPause</a> (const std::string &amp;_name, bool _pause)</td></tr>
+<tr class="memdesc:a7915a9f3ccd68ee110a7f81edf456955"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置时钟暂停状态  <br /></td></tr>
+<tr class="separator:a7915a9f3ccd68ee110a7f81edf456955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4da8e156f48152e6963cabccc6bb948"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#ae4da8e156f48152e6963cabccc6bb948">SetFramePerSecond</a> (const std::string &amp;_name, double _fps)</td></tr>
+<tr class="memdesc:ae4da8e156f48152e6963cabccc6bb948"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置时钟刷新率  <br /></td></tr>
+<tr class="separator:ae4da8e156f48152e6963cabccc6bb948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b03ad25b6ef00a7a30ba64c480e4c38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a2b03ad25b6ef00a7a30ba64c480e4c38">SetFrameScale</a> (const std::string &amp;_name, double _scale)</td></tr>
+<tr class="memdesc:a2b03ad25b6ef00a7a30ba64c480e4c38"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置时钟的时间缩放  <br /></td></tr>
+<tr class="separator:a2b03ad25b6ef00a7a30ba64c480e4c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf3a0c1a704e45bd181dac0dd424626"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#aebf3a0c1a704e45bd181dac0dd424626">ResetClockIns</a> (const std::string &amp;_name)</td></tr>
+<tr class="memdesc:aebf3a0c1a704e45bd181dac0dd424626"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置时钟的计时器  <br /></td></tr>
+<tr class="separator:aebf3a0c1a704e45bd181dac0dd424626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3c335312f19d0fac34cd525a2175240"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#ac3c335312f19d0fac34cd525a2175240">ull2ms_freq</a> (<a class="el" href="namespace_tanmi_engine.html#a62387fbb2fa7e0f64b82994ba2e0e8c8">ull</a> time_ull)</td></tr>
+<tr class="memdesc:ac3c335312f19d0fac34cd525a2175240"><td class="mdescLeft">&#160;</td><td class="mdescRight">计数器转换（用于调试），将 unsigned long long 类型的计数器转换为毫秒计数器  <br /></td></tr>
+<tr class="separator:ac3c335312f19d0fac34cd525a2175240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b23a50f3aee44914663b1f5332fd32a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a3b23a50f3aee44914663b1f5332fd32a">DEBUG</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:a3b23a50f3aee44914663b1f5332fd32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出调试信息  <br /></td></tr>
+<tr class="separator:a3b23a50f3aee44914663b1f5332fd32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e22019d86a95f805deb22eb7962fc1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a35e22019d86a95f805deb22eb7962fc1">~Clock</a> ()=default</td></tr>
+<tr class="memdesc:a35e22019d86a95f805deb22eb7962fc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <br /></td></tr>
+<tr class="separator:a35e22019d86a95f805deb22eb7962fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a24090ad7b856b974d9d282f9a1a4e1d2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_tanmi_engine_1_1_clock.html">Clock</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tanmi_engine_1_1_clock.html#a24090ad7b856b974d9d282f9a1a4e1d2">Instance</a> ()</td></tr>
+<tr class="memdesc:a24090ad7b856b974d9d282f9a1a4e1d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取Clock实例引用  <br /></td></tr>
+<tr class="separator:a24090ad7b856b974d9d282f9a1a4e1d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>该类定义了一个基于帧计数的计时器系统 </p>
+<p>基于单例模式实现 </p>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00182">182</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a35e22019d86a95f805deb22eb7962fc1" name="a35e22019d86a95f805deb22eb7962fc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e22019d86a95f805deb22eb7962fc1">&#9670;&#160;</a></span>~Clock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TanmiEngine::Clock::~Clock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a6c3afafba4ae06d3fd511dd15d436799" name="a6c3afafba4ae06d3fd511dd15d436799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c3afafba4ae06d3fd511dd15d436799">&#9670;&#160;</a></span>CopyClock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TanmiEngine::Clock::CopyClock </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>newclk</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>复制时钟 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>被复制的时钟名称 </td></tr>
+    <tr><td class="paramname">newclk</td><td>新时钟名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true 复制成功 </dd>
+<dd>
+false 复制失败 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00450">450</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tanmi_engine_1_1_clock_a6c3afafba4ae06d3fd511dd15d436799_cgraph.png" border="0" usemap="#aclass_tanmi_engine_1_1_clock_a6c3afafba4ae06d3fd511dd15d436799_cgraph" alt=""/></div>
+<map name="aclass_tanmi_engine_1_1_clock_a6c3afafba4ae06d3fd511dd15d436799_cgraph" id="aclass_tanmi_engine_1_1_clock_a6c3afafba4ae06d3fd511dd15d436799_cgraph">
+<area shape="rect" title="复制时钟" alt="" coords="5,5,144,45"/>
+<area shape="rect" href="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e" title=" " alt="" coords="192,5,388,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3b23a50f3aee44914663b1f5332fd32a" name="a3b23a50f3aee44914663b1f5332fd32a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b23a50f3aee44914663b1f5332fd32a">&#9670;&#160;</a></span>DEBUG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TanmiEngine::Clock::DEBUG </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em> = <code>&quot;Global&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>输出调试信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>调试信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00662">662</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a991af0411fd768ec4318e9ad82e486d5" name="a991af0411fd768ec4318e9ad82e486d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991af0411fd768ec4318e9ad82e486d5">&#9670;&#160;</a></span>EraseClock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TanmiEngine::Clock::EraseClock </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移除时钟 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>时钟名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true 移除成功 </dd>
+<dd>
+false 移除失败 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00427">427</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tanmi_engine_1_1_clock_a991af0411fd768ec4318e9ad82e486d5_cgraph.png" border="0" usemap="#aclass_tanmi_engine_1_1_clock_a991af0411fd768ec4318e9ad82e486d5_cgraph" alt=""/></div>
+<map name="aclass_tanmi_engine_1_1_clock_a991af0411fd768ec4318e9ad82e486d5_cgraph" id="aclass_tanmi_engine_1_1_clock_a991af0411fd768ec4318e9ad82e486d5_cgraph">
+<area shape="rect" title="移除时钟" alt="" coords="5,5,144,45"/>
+<area shape="rect" href="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e" title=" " alt="" coords="192,5,388,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a95a060463ce8fa31c9214f086057746e" name="a95a060463ce8fa31c9214f086057746e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95a060463ce8fa31c9214f086057746e">&#9670;&#160;</a></span>GetElapsed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TanmiEngine::Clock::GetElapsed </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em> = <code>&quot;Global&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取时钟自创建以来经过的绝对时长 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>时钟名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>double 绝对时长 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00504">504</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tanmi_engine_1_1_clock_a95a060463ce8fa31c9214f086057746e_cgraph.png" border="0" usemap="#aclass_tanmi_engine_1_1_clock_a95a060463ce8fa31c9214f086057746e_cgraph" alt=""/></div>
+<map name="aclass_tanmi_engine_1_1_clock_a95a060463ce8fa31c9214f086057746e_cgraph" id="aclass_tanmi_engine_1_1_clock_a95a060463ce8fa31c9214f086057746e_cgraph">
+<area shape="rect" title="获取时钟自创建以来经过的绝对时长" alt="" coords="5,5,144,45"/>
+<area shape="rect" href="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e" title=" " alt="" coords="192,5,388,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a79e7591dacf1d286313c33491ddae233" name="a79e7591dacf1d286313c33491ddae233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e7591dacf1d286313c33491ddae233">&#9670;&#160;</a></span>GetElapsedRelative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TanmiEngine::Clock::GetElapsedRelative </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em> = <code>&quot;Global&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取时钟自创建以来经过的相对时长 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>时钟名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>double 相对时长 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00522">522</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tanmi_engine_1_1_clock_a79e7591dacf1d286313c33491ddae233_cgraph.png" border="0" usemap="#aclass_tanmi_engine_1_1_clock_a79e7591dacf1d286313c33491ddae233_cgraph" alt=""/></div>
+<map name="aclass_tanmi_engine_1_1_clock_a79e7591dacf1d286313c33491ddae233_cgraph" id="aclass_tanmi_engine_1_1_clock_a79e7591dacf1d286313c33491ddae233_cgraph">
+<area shape="rect" title="获取时钟自创建以来经过的相对时长" alt="" coords="5,5,148,45"/>
+<area shape="rect" href="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e" title=" " alt="" coords="196,5,392,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9e8f50903b8ce027e9c933ddbdbb1a44" name="a9e8f50903b8ce027e9c933ddbdbb1a44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e8f50903b8ce027e9c933ddbdbb1a44">&#9670;&#160;</a></span>GetFramePerSecond()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TanmiEngine::Clock::GetFramePerSecond </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em> = <code>&quot;Global&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取时钟刷新率 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>时钟名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>double 刷新率 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00489">489</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tanmi_engine_1_1_clock_a9e8f50903b8ce027e9c933ddbdbb1a44_cgraph.png" border="0" usemap="#aclass_tanmi_engine_1_1_clock_a9e8f50903b8ce027e9c933ddbdbb1a44_cgraph" alt=""/></div>
+<map name="aclass_tanmi_engine_1_1_clock_a9e8f50903b8ce027e9c933ddbdbb1a44_cgraph" id="aclass_tanmi_engine_1_1_clock_a9e8f50903b8ce027e9c933ddbdbb1a44_cgraph">
+<area shape="rect" title="获取时钟刷新率" alt="" coords="5,5,157,45"/>
+<area shape="rect" href="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e" title=" " alt="" coords="205,5,401,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a774162e60dbca15d27dc89a786fb108e" name="a774162e60dbca15d27dc89a786fb108e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a774162e60dbca15d27dc89a786fb108e">&#9670;&#160;</a></span>GetPause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TanmiEngine::Clock::GetPause </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取时钟是否暂停 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>时钟名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true 时钟暂停 </dd>
+<dd>
+false 时钟不暂停 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00474">474</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tanmi_engine_1_1_clock_a774162e60dbca15d27dc89a786fb108e_cgraph.png" border="0" usemap="#aclass_tanmi_engine_1_1_clock_a774162e60dbca15d27dc89a786fb108e_cgraph" alt=""/></div>
+<map name="aclass_tanmi_engine_1_1_clock_a774162e60dbca15d27dc89a786fb108e_cgraph" id="aclass_tanmi_engine_1_1_clock_a774162e60dbca15d27dc89a786fb108e_cgraph">
+<area shape="rect" title="获取时钟是否暂停" alt="" coords="5,5,144,45"/>
+<area shape="rect" href="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e" title=" " alt="" coords="192,5,388,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5ed7e66e35d3042f53c3d7290d3b05bd" name="a5ed7e66e35d3042f53c3d7290d3b05bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ed7e66e35d3042f53c3d7290d3b05bd">&#9670;&#160;</a></span>GetTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TanmiEngine::Clock::GetTick </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em> = <code>&quot;Global&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取时钟自上一刷新节点经过的绝对时长 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>时钟名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>double 绝对时长 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00541">541</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tanmi_engine_1_1_clock_a5ed7e66e35d3042f53c3d7290d3b05bd_cgraph.png" border="0" usemap="#aclass_tanmi_engine_1_1_clock_a5ed7e66e35d3042f53c3d7290d3b05bd_cgraph" alt=""/></div>
+<map name="aclass_tanmi_engine_1_1_clock_a5ed7e66e35d3042f53c3d7290d3b05bd_cgraph" id="aclass_tanmi_engine_1_1_clock_a5ed7e66e35d3042f53c3d7290d3b05bd_cgraph">
+<area shape="rect" title="获取时钟自上一刷新节点经过的绝对时长" alt="" coords="5,5,144,45"/>
+<area shape="rect" href="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e" title=" " alt="" coords="192,5,388,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a37c25e03a86326559832a36b9d71b99d" name="a37c25e03a86326559832a36b9d71b99d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c25e03a86326559832a36b9d71b99d">&#9670;&#160;</a></span>GetTickRelative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TanmiEngine::Clock::GetTickRelative </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em> = <code>&quot;Global&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取时钟自上一刷新节点经过的相对时长 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>时钟名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>double 相对时长 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00559">559</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tanmi_engine_1_1_clock_a37c25e03a86326559832a36b9d71b99d_cgraph.png" border="0" usemap="#aclass_tanmi_engine_1_1_clock_a37c25e03a86326559832a36b9d71b99d_cgraph" alt=""/></div>
+<map name="aclass_tanmi_engine_1_1_clock_a37c25e03a86326559832a36b9d71b99d_cgraph" id="aclass_tanmi_engine_1_1_clock_a37c25e03a86326559832a36b9d71b99d_cgraph">
+<area shape="rect" title="获取时钟自上一刷新节点经过的相对时长" alt="" coords="5,5,144,45"/>
+<area shape="rect" href="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e" title=" " alt="" coords="192,5,388,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2440ac71fa8ec05aeafacab463dd4e52" name="a2440ac71fa8ec05aeafacab463dd4e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2440ac71fa8ec05aeafacab463dd4e52">&#9670;&#160;</a></span>GetUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TanmiEngine::Clock::GetUpdate </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em> = <code>&quot;Global&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取时钟是否超过更新点，是则更新时钟 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>时钟名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true 时钟需要更新 </dd>
+<dd>
+false 时钟不需要更新 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00469">469</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a24090ad7b856b974d9d282f9a1a4e1d2" name="a24090ad7b856b974d9d282f9a1a4e1d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24090ad7b856b974d9d282f9a1a4e1d2">&#9670;&#160;</a></span>Instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tanmi_engine_1_1_clock.html">Clock</a> &amp; TanmiEngine::Clock::Instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取Clock实例引用 </p>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="class_tanmi_engine_1_1_clock.html" title="该类定义了一个基于帧计数的计时器系统">Clock</a>&amp; Clock实例引用 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00400">400</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8af176f2d350e68d09c4909d667d591e" name="a8af176f2d350e68d09c4909d667d591e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af176f2d350e68d09c4909d667d591e">&#9670;&#160;</a></span>NewClock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TanmiEngine::Clock::NewClock </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_fps</em> = <code>60.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>新建时钟 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>时钟名称 </td></tr>
+    <tr><td class="paramname">_fps</td><td>刷新率 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true 新建成功 </dd>
+<dd>
+false 新建失败 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00406">406</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tanmi_engine_1_1_clock_a8af176f2d350e68d09c4909d667d591e_cgraph.png" border="0" usemap="#aclass_tanmi_engine_1_1_clock_a8af176f2d350e68d09c4909d667d591e_cgraph" alt=""/></div>
+<map name="aclass_tanmi_engine_1_1_clock_a8af176f2d350e68d09c4909d667d591e_cgraph" id="aclass_tanmi_engine_1_1_clock_a8af176f2d350e68d09c4909d667d591e_cgraph">
+<area shape="rect" title="新建时钟" alt="" coords="5,5,144,45"/>
+<area shape="rect" href="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e" title=" " alt="" coords="192,5,388,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aebf3a0c1a704e45bd181dac0dd424626" name="aebf3a0c1a704e45bd181dac0dd424626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebf3a0c1a704e45bd181dac0dd424626">&#9670;&#160;</a></span>ResetClockIns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TanmiEngine::Clock::ResetClockIns </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重置时钟的计时器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>时钟名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00645">645</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tanmi_engine_1_1_clock_aebf3a0c1a704e45bd181dac0dd424626_cgraph.png" border="0" usemap="#aclass_tanmi_engine_1_1_clock_aebf3a0c1a704e45bd181dac0dd424626_cgraph" alt=""/></div>
+<map name="aclass_tanmi_engine_1_1_clock_aebf3a0c1a704e45bd181dac0dd424626_cgraph" id="aclass_tanmi_engine_1_1_clock_aebf3a0c1a704e45bd181dac0dd424626_cgraph">
+<area shape="rect" title="重置时钟的计时器" alt="" coords="5,5,144,45"/>
+<area shape="rect" href="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e" title=" " alt="" coords="192,5,388,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae4da8e156f48152e6963cabccc6bb948" name="ae4da8e156f48152e6963cabccc6bb948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4da8e156f48152e6963cabccc6bb948">&#9670;&#160;</a></span>SetFramePerSecond()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TanmiEngine::Clock::SetFramePerSecond </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_fps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置时钟刷新率 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>时钟名称 </td></tr>
+    <tr><td class="paramname">_fps</td><td>刷新率 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00609">609</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tanmi_engine_1_1_clock_ae4da8e156f48152e6963cabccc6bb948_cgraph.png" border="0" usemap="#aclass_tanmi_engine_1_1_clock_ae4da8e156f48152e6963cabccc6bb948_cgraph" alt=""/></div>
+<map name="aclass_tanmi_engine_1_1_clock_ae4da8e156f48152e6963cabccc6bb948_cgraph" id="aclass_tanmi_engine_1_1_clock_ae4da8e156f48152e6963cabccc6bb948_cgraph">
+<area shape="rect" title="设置时钟刷新率" alt="" coords="5,5,156,45"/>
+<area shape="rect" href="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e" title=" " alt="" coords="204,5,400,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2b03ad25b6ef00a7a30ba64c480e4c38" name="a2b03ad25b6ef00a7a30ba64c480e4c38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b03ad25b6ef00a7a30ba64c480e4c38">&#9670;&#160;</a></span>SetFrameScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TanmiEngine::Clock::SetFrameScale </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置时钟的时间缩放 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>时钟名称 </td></tr>
+    <tr><td class="paramname">_scale</td><td>缩放值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00627">627</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tanmi_engine_1_1_clock_a2b03ad25b6ef00a7a30ba64c480e4c38_cgraph.png" border="0" usemap="#aclass_tanmi_engine_1_1_clock_a2b03ad25b6ef00a7a30ba64c480e4c38_cgraph" alt=""/></div>
+<map name="aclass_tanmi_engine_1_1_clock_a2b03ad25b6ef00a7a30ba64c480e4c38_cgraph" id="aclass_tanmi_engine_1_1_clock_a2b03ad25b6ef00a7a30ba64c480e4c38_cgraph">
+<area shape="rect" title="设置时钟的时间缩放" alt="" coords="5,5,144,45"/>
+<area shape="rect" href="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e" title=" " alt="" coords="192,5,388,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7915a9f3ccd68ee110a7f81edf456955" name="a7915a9f3ccd68ee110a7f81edf456955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7915a9f3ccd68ee110a7f81edf456955">&#9670;&#160;</a></span>SetPause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TanmiEngine::Clock::SetPause </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_pause</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置时钟暂停状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>时钟名称 </td></tr>
+    <tr><td class="paramname">_pause</td><td>true表示暂停，false表示继续 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00577">577</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_tanmi_engine_1_1_clock_a7915a9f3ccd68ee110a7f81edf456955_cgraph.png" border="0" usemap="#aclass_tanmi_engine_1_1_clock_a7915a9f3ccd68ee110a7f81edf456955_cgraph" alt=""/></div>
+<map name="aclass_tanmi_engine_1_1_clock_a7915a9f3ccd68ee110a7f81edf456955_cgraph" id="aclass_tanmi_engine_1_1_clock_a7915a9f3ccd68ee110a7f81edf456955_cgraph">
+<area shape="rect" title="设置时钟暂停状态" alt="" coords="5,5,144,45"/>
+<area shape="rect" href="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e" title=" " alt="" coords="192,5,388,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac3c335312f19d0fac34cd525a2175240" name="ac3c335312f19d0fac34cd525a2175240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3c335312f19d0fac34cd525a2175240">&#9670;&#160;</a></span>ull2ms_freq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TanmiEngine::Clock::ull2ms_freq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_tanmi_engine.html#a62387fbb2fa7e0f64b82994ba2e0e8c8">ull</a>&#160;</td>
+          <td class="paramname"><em>time_ull</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计数器转换（用于调试），将 unsigned long long 类型的计数器转换为毫秒计数器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time_ull</td><td>unsigned long long 类型的计数器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>转换后的毫秒计数器 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a> 第 <a class="el" href="_tanmi_clock__64_8hpp_source.html#l00361">361</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>I:/EnginePrj/TanmiClock/TanmiClock/src/<a class="el" href="_tanmi_clock__64_8hpp_source.html">TanmiClock_64.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

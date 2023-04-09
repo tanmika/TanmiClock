@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="命名空间"><param name="Local" value="namespaces.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="命名空间列表"><param name="Local" value="namespaces.html#top"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine"><param name="Local" value="namespace_tanmi_engine.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Clock"><param name="Local" value="class_tanmi_engine_1_1_clock.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="~Clock"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a35e22019d86a95f805deb22eb7962fc1"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="CopyClock"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a6c3afafba4ae06d3fd511dd15d436799"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="DEBUG"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a3b23a50f3aee44914663b1f5332fd32a"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="EraseClock"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a991af0411fd768ec4318e9ad82e486d5"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetElapsed"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a95a060463ce8fa31c9214f086057746e"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetElapsedRelative"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a79e7591dacf1d286313c33491ddae233"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetFramePerSecond"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a9e8f50903b8ce027e9c933ddbdbb1a44"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetPause"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a774162e60dbca15d27dc89a786fb108e"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetTick"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a5ed7e66e35d3042f53c3d7290d3b05bd"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetTickRelative"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a37c25e03a86326559832a36b9d71b99d"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetUpdate"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a2440ac71fa8ec05aeafacab463dd4e52"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="NewClock"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a8af176f2d350e68d09c4909d667d591e"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ResetClockIns"><param name="Local" value="class_tanmi_engine_1_1_clock.html#aebf3a0c1a704e45bd181dac0dd424626"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="SetFramePerSecond"><param name="Local" value="class_tanmi_engine_1_1_clock.html#ae4da8e156f48152e6963cabccc6bb948"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="SetFrameScale"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a2b03ad25b6ef00a7a30ba64c480e4c38"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="SetPause"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a7915a9f3ccd68ee110a7f81edf456955"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ull2ms_freq"><param name="Local" value="class_tanmi_engine_1_1_clock.html#ac3c335312f19d0fac34cd525a2175240"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="~ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a2a5e9bcb9b0a9f1d1934594aa3cd39ac"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a7173ab253dcd589551ae773f47a7b8f2"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#aa7c5cd04c8bd60da77a6302410d10c45"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a97a9f6f1f9045c1b71501c05e600e6cc"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setFrameRateUll"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a1333d7f6dec4c57e96a1eea5922cf84a"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setNameStr"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a90b963185c62ed17bc2af0c5f8661d89"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setScaleFloat"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a764cdb44f7b7434fef5646d5e9e94324"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="cycle"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a147d0126503b60e0bfe31b810fcfe825"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ins_cycle"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a9d5121083cdd353f1bb722714dde1b03"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="last_cycle"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a37882d780cb953f9f314e2bd3f24100f"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="lock"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#aebf5b2a82533a1dba2bfc31778d93714"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="name"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#af4cd1581898fc6f0eb99dd2067a5fb01"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="pause"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#ac0fd2feda17416ef2f3d6ad485ad9ed6"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="pause_cycle"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#ae6dc0b104a33f5664cbc9cbeb5da6c77"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="relative_tick"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a7f22633c9befca37cd13cd96433402d2"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="scale"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a5fa4e5f2cc9ec19ab78e4bfc0ffd0e35"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="temp_lint"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a5053cbe9ab76fc9447ef88eeeb3d6a14"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="temp_ull"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a58d039c4728a054f54228aabccc71532"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="templock"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a592a463f38e54dc716e35e47a68d91f9"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="update_tick"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#af8f5e385696f3366bce2aeb0bb251d13"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockException"><param name="Local" value="class_tanmi_engine_1_1_clock_exception.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="what"><param name="Local" value="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockNameExistException"><param name="Local" value="class_tanmi_engine_1_1_clock_name_exist_exception.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="what"><param name="Local" value="class_tanmi_engine_1_1_clock_name_exist_exception.html#a22124ea06356e4995fa908089b7efb23"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockNotFoundException"><param name="Local" value="class_tanmi_engine_1_1_clock_not_found_exception.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="what"><param name="Local" value="class_tanmi_engine_1_1_clock_not_found_exception.html#abc241c6923cda9c245b08f7cd7534581"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockOutOfRangeException"><param name="Local" value="class_tanmi_engine_1_1_clock_out_of_range_exception.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="what"><param name="Local" value="class_tanmi_engine_1_1_clock_out_of_range_exception.html#a826eae0e8a1c8daf25017cc1221bfaa5"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="lint"><param name="Local" value="namespace_tanmi_engine.html#a3daffe027fc73fbfcc2572ddd7359c36"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ull"><param name="Local" value="namespace_tanmi_engine.html#a62387fbb2fa7e0f64b82994ba2e0e8c8"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="命名空间成员"><param name="Local" value="namespacemembers.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="全部"><param name="Local" value="namespacemembers.html#top"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="类型定义"><param name="Local" value="namespacemembers_type.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="类"><param name="Local" value="annotated.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="类列表"><param name="Local" value="annotated.html#top"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine"><param name="Local" value="namespace_tanmi_engine.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Clock"><param name="Local" value="class_tanmi_engine_1_1_clock.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="~Clock"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a35e22019d86a95f805deb22eb7962fc1"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="CopyClock"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a6c3afafba4ae06d3fd511dd15d436799"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="DEBUG"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a3b23a50f3aee44914663b1f5332fd32a"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="EraseClock"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a991af0411fd768ec4318e9ad82e486d5"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetElapsed"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a95a060463ce8fa31c9214f086057746e"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetElapsedRelative"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a79e7591dacf1d286313c33491ddae233"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetFramePerSecond"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a9e8f50903b8ce027e9c933ddbdbb1a44"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetPause"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a774162e60dbca15d27dc89a786fb108e"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetTick"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a5ed7e66e35d3042f53c3d7290d3b05bd"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetTickRelative"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a37c25e03a86326559832a36b9d71b99d"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetUpdate"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a2440ac71fa8ec05aeafacab463dd4e52"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="NewClock"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a8af176f2d350e68d09c4909d667d591e"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ResetClockIns"><param name="Local" value="class_tanmi_engine_1_1_clock.html#aebf3a0c1a704e45bd181dac0dd424626"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="SetFramePerSecond"><param name="Local" value="class_tanmi_engine_1_1_clock.html#ae4da8e156f48152e6963cabccc6bb948"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="SetFrameScale"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a2b03ad25b6ef00a7a30ba64c480e4c38"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="SetPause"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a7915a9f3ccd68ee110a7f81edf456955"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ull2ms_freq"><param name="Local" value="class_tanmi_engine_1_1_clock.html#ac3c335312f19d0fac34cd525a2175240"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="~ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a2a5e9bcb9b0a9f1d1934594aa3cd39ac"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a7173ab253dcd589551ae773f47a7b8f2"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#aa7c5cd04c8bd60da77a6302410d10c45"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a97a9f6f1f9045c1b71501c05e600e6cc"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setFrameRateUll"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a1333d7f6dec4c57e96a1eea5922cf84a"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setNameStr"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a90b963185c62ed17bc2af0c5f8661d89"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="setScaleFloat"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a764cdb44f7b7434fef5646d5e9e94324"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="cycle"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a147d0126503b60e0bfe31b810fcfe825"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ins_cycle"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a9d5121083cdd353f1bb722714dde1b03"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="last_cycle"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a37882d780cb953f9f314e2bd3f24100f"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="lock"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#aebf5b2a82533a1dba2bfc31778d93714"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="name"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#af4cd1581898fc6f0eb99dd2067a5fb01"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="pause"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#ac0fd2feda17416ef2f3d6ad485ad9ed6"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="pause_cycle"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#ae6dc0b104a33f5664cbc9cbeb5da6c77"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="relative_tick"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a7f22633c9befca37cd13cd96433402d2"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="scale"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a5fa4e5f2cc9ec19ab78e4bfc0ffd0e35"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="temp_lint"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a5053cbe9ab76fc9447ef88eeeb3d6a14"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="temp_ull"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a58d039c4728a054f54228aabccc71532"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="templock"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a592a463f38e54dc716e35e47a68d91f9"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="update_tick"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#af8f5e385696f3366bce2aeb0bb251d13"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockException"><param name="Local" value="class_tanmi_engine_1_1_clock_exception.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="what"><param name="Local" value="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockNameExistException"><param name="Local" value="class_tanmi_engine_1_1_clock_name_exist_exception.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="what"><param name="Local" value="class_tanmi_engine_1_1_clock_name_exist_exception.html#a22124ea06356e4995fa908089b7efb23"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockNotFoundException"><param name="Local" value="class_tanmi_engine_1_1_clock_not_found_exception.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="what"><param name="Local" value="class_tanmi_engine_1_1_clock_not_found_exception.html#abc241c6923cda9c245b08f7cd7534581"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockOutOfRangeException"><param name="Local" value="class_tanmi_engine_1_1_clock_out_of_range_exception.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="what"><param name="Local" value="class_tanmi_engine_1_1_clock_out_of_range_exception.html#a826eae0e8a1c8daf25017cc1221bfaa5"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="类索引"><param name="Local" value="classes.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="类继承关系"><param name="Local" value="hierarchy.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine::Clock"><param name="Local" value="class_tanmi_engine_1_1_clock.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine::ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="std::exception"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine::ClockException"><param name="Local" value="class_tanmi_engine_1_1_clock_exception.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine::ClockNameExistException"><param name="Local" value="class_tanmi_engine_1_1_clock_name_exist_exception.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine::ClockNotFoundException"><param name="Local" value="class_tanmi_engine_1_1_clock_not_found_exception.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine::ClockOutOfRangeException"><param name="Local" value="class_tanmi_engine_1_1_clock_out_of_range_exception.html"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="类成员"><param name="Local" value="functions.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="全部"><param name="Local" value="functions.html#top"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="函数"><param name="Local" value="functions_func.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="变量"><param name="Local" value="functions_vars.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="文件"><param name="Local" value="files.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="文件列表"><param name="Local" value="files.html#top"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="EnginePrj"><param name="Local" value="dir_044c15e35cb8a1cfb1be4bc8edc12f0b.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiClock"><param name="Local" value="dir_fe15765c12b59e628723147d418d7674.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiClock"><param name="Local" value="dir_89cdc5e8d8b44290250ea0d04e31b5e8.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="src"><param name="Local" value="dir_728ffd061efad62f2794b8ecc510cb17.html"><param name="ImageNumber" value="1"></OBJECT>
+            <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiClock_64.hpp"><param name="Local" value="_tanmi_clock__64_8hpp.html"><param name="ImageNumber" value="1"></OBJECT>
+              <UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine::ClockException"><param name="Local" value="class_tanmi_engine_1_1_clock_exception.html"><param name="ImageNumber" value="1"></OBJECT>
+                <UL>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="what"><param name="Local" value="class_tanmi_engine_1_1_clock_exception.html#a67bee5a448d21421a6bb74cba2b1ab6e"><param name="ImageNumber" value="11"></OBJECT>
+                </UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine::ClockOutOfRangeException"><param name="Local" value="class_tanmi_engine_1_1_clock_out_of_range_exception.html"><param name="ImageNumber" value="1"></OBJECT>
+                <UL>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="what"><param name="Local" value="class_tanmi_engine_1_1_clock_out_of_range_exception.html#a826eae0e8a1c8daf25017cc1221bfaa5"><param name="ImageNumber" value="11"></OBJECT>
+                </UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine::ClockNotFoundException"><param name="Local" value="class_tanmi_engine_1_1_clock_not_found_exception.html"><param name="ImageNumber" value="1"></OBJECT>
+                <UL>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="what"><param name="Local" value="class_tanmi_engine_1_1_clock_not_found_exception.html#abc241c6923cda9c245b08f7cd7534581"><param name="ImageNumber" value="11"></OBJECT>
+                </UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine::ClockNameExistException"><param name="Local" value="class_tanmi_engine_1_1_clock_name_exist_exception.html"><param name="ImageNumber" value="1"></OBJECT>
+                <UL>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="what"><param name="Local" value="class_tanmi_engine_1_1_clock_name_exist_exception.html#a22124ea06356e4995fa908089b7efb23"><param name="ImageNumber" value="11"></OBJECT>
+                </UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine::ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html"><param name="ImageNumber" value="1"></OBJECT>
+                <UL>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="~ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a2a5e9bcb9b0a9f1d1934594aa3cd39ac"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a7173ab253dcd589551ae773f47a7b8f2"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#aa7c5cd04c8bd60da77a6302410d10c45"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="ClockElem"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a97a9f6f1f9045c1b71501c05e600e6cc"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="setFrameRateUll"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a1333d7f6dec4c57e96a1eea5922cf84a"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="setNameStr"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a90b963185c62ed17bc2af0c5f8661d89"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="setScaleFloat"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a764cdb44f7b7434fef5646d5e9e94324"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="cycle"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a147d0126503b60e0bfe31b810fcfe825"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="ins_cycle"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a9d5121083cdd353f1bb722714dde1b03"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="last_cycle"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a37882d780cb953f9f314e2bd3f24100f"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="lock"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#aebf5b2a82533a1dba2bfc31778d93714"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="name"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#af4cd1581898fc6f0eb99dd2067a5fb01"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="pause"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#ac0fd2feda17416ef2f3d6ad485ad9ed6"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="pause_cycle"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#ae6dc0b104a33f5664cbc9cbeb5da6c77"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="relative_tick"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a7f22633c9befca37cd13cd96433402d2"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="scale"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a5fa4e5f2cc9ec19ab78e4bfc0ffd0e35"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="temp_lint"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a5053cbe9ab76fc9447ef88eeeb3d6a14"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="temp_ull"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a58d039c4728a054f54228aabccc71532"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="templock"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#a592a463f38e54dc716e35e47a68d91f9"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="update_tick"><param name="Local" value="class_tanmi_engine_1_1_clock_elem.html#af8f5e385696f3366bce2aeb0bb251d13"><param name="ImageNumber" value="11"></OBJECT>
+                </UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="TanmiEngine::Clock"><param name="Local" value="class_tanmi_engine_1_1_clock.html"><param name="ImageNumber" value="1"></OBJECT>
+                <UL>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="~Clock"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a35e22019d86a95f805deb22eb7962fc1"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="CopyClock"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a6c3afafba4ae06d3fd511dd15d436799"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="DEBUG"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a3b23a50f3aee44914663b1f5332fd32a"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="EraseClock"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a991af0411fd768ec4318e9ad82e486d5"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="GetElapsed"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a95a060463ce8fa31c9214f086057746e"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="GetElapsedRelative"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a79e7591dacf1d286313c33491ddae233"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="GetFramePerSecond"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a9e8f50903b8ce027e9c933ddbdbb1a44"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="GetPause"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a774162e60dbca15d27dc89a786fb108e"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="GetTick"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a5ed7e66e35d3042f53c3d7290d3b05bd"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="GetTickRelative"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a37c25e03a86326559832a36b9d71b99d"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="GetUpdate"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a2440ac71fa8ec05aeafacab463dd4e52"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="NewClock"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a8af176f2d350e68d09c4909d667d591e"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="ResetClockIns"><param name="Local" value="class_tanmi_engine_1_1_clock.html#aebf3a0c1a704e45bd181dac0dd424626"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="SetFramePerSecond"><param name="Local" value="class_tanmi_engine_1_1_clock.html#ae4da8e156f48152e6963cabccc6bb948"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="SetFrameScale"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a2b03ad25b6ef00a7a30ba64c480e4c38"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="SetPause"><param name="Local" value="class_tanmi_engine_1_1_clock.html#a7915a9f3ccd68ee110a7f81edf456955"><param name="ImageNumber" value="11"></OBJECT>
+                <LI><OBJECT type="text/sitemap"><param name="Name" value="ull2ms_freq"><param name="Local" value="class_tanmi_engine_1_1_clock.html#ac3c335312f19d0fac34cd525a2175240"><param name="ImageNumber" value="11"></OBJECT>
+                </UL>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="lint"><param name="Local" value="_tanmi_clock__64_8hpp.html#a3daffe027fc73fbfcc2572ddd7359c36"><param name="ImageNumber" value="11"></OBJECT>
+              <LI><OBJECT type="text/sitemap"><param name="Name" value="ull"><param name="Local" value="_tanmi_clock__64_8hpp.html#a62387fbb2fa7e0f64b82994ba2e0e8c8"><param name="ImageNumber" value="11"></OBJECT>
+              </UL>
+            </UL>
+          </UL>
+        </UL>
+      </UL>
+    </UL>
+  </UL>
+</UL>
+</BODY>
+</HTML>
