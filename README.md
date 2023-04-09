@@ -1,6 +1,6 @@
 # TanmiClock
-##
-### 2023.4.9 update
+
+> 2023.4.9 update
 
 TanmiClock是一个基于单例模式的简单时钟系统，使用mutex保证线程安全。
 
