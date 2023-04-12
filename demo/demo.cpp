@@ -3,49 +3,47 @@
 
 using namespace TanmiEngine;
 
-auto calFPS(std::string&) -> int;
+auto calFPS(ClockID) -> int;
 auto calStability(std::vector<double>&) -> double;
-auto showDemo(std::string&) -> int;
+auto showDemo(ClockID) -> int;
 
 auto main() -> int
 {
 	Clock& clk = Clock::Instance();
-	clk.SetFramePerSecond("Global", 5);
-	std::cout << clk.GetFramePerSecond() << std::endl;
+	auto clk0 = clk.NewClock();
+	clk.SetFramePerSecond(clk0, 5);
+	std::cout << clk.GetFramePerSecond(clk0) << std::endl;
 
-	std::string str1("democlk1");
-	clk.NewClock(str1, 10);
-	clk.SetFrameScale(str1, 0.1);
-	calFPS(str1);
-	clk.EraseClock(str1);
+	auto clk1 = clk.NewClock(clk.GetFramePerSecond(clk0)*2);
+	clk.SetFrameScale(clk1, 0.1);
+	calFPS(clk1);
+	clk.EraseClock(clk1);
 
-	std::string str2("democlk2");
-	clk.NewClock(str2);
-	clk.SetFramePerSecond(str2, 15);
-	showDemo(str2);
-	clk.EraseClock(str2);
+	auto clk2 = clk.NewClock(15);
+	showDemo(clk2);
+	clk.EraseClock(clk2);
 	return 0;
 }
-auto calFPS(std::string& str) -> int
+auto calFPS(ClockID id) -> int
 {
 	Clock& clk = Clock::Instance();
 	const float time = 3.0f;
 	int count = 0;
-	int begin = clk.GetElapsed(str);
-	int last = clk.GetElapsed(str);
+	int begin = clk.GetElapsed(id);
+	int last = clk.GetElapsed(id);
 	bool con = true;
 	std::vector<double> vec;
 	while (con)
 	{
-		if (clk.GetUpdate(str))
+		if (clk.GetUpdate(id))
 		{
-			std::cout << "clock elapsed:"<<clk.GetElapsed(str) << "ms, tick cost:" << clk.GetTick(str)<<"ms";
-			last = clk.GetElapsed(str);
-			vec.push_back(1.0f / clk.GetTick(str));
-			std::cout << "  clock elapsed:"<<clk.GetElapsedRelative(str) << "ms relative,  tick cost:" << clk.GetTickRelative(str) << "ms relative.\n";
+			std::cout << "clock elapsed:"<<clk.GetElapsed(id) << "ms, tick cost:" << clk.GetTick(id)<<"ms";
+			last = clk.GetElapsed(id);
+			vec.push_back(1.0f / clk.GetTick(id));
+			std::cout << "  clock elapsed:"<<clk.GetElapsedRelative(id) << "ms relative,  tick cost:" << clk.GetTickRelative(id) << "ms relative.\n";
 			count++;
 		}
-		if (clk.GetElapsed(str) - begin >= time * 1000)
+		if (clk.GetElapsed(id) - begin >= time * 1000)
 			con = false;
 	}
 	std::cout << "FPS:" << count / time << std::endl;
@@ -69,20 +67,19 @@ auto calStability(std::vector<double>& v) -> double
 	sigma /= v.size();
 	return 1 - sigma;
 }
-auto showDemo(std::string& str) -> int
+auto showDemo(ClockID id) -> int
 {
 	Clock& clk = Clock::Instance();
-	std::string str3("clk3");
-	clk.CopyClock(str, str3);
-	clk.SetFramePerSecond(str3, 5);
+	auto clk3 = clk.CopyClock(id);
+	clk.SetFramePerSecond(clk3, 5);
 	const float time = 10.0f;
 	int count = 0;
-	int begin = clk.GetElapsed(str);
+	int begin = clk.GetElapsed(id);
 	bool con = true;
 	int set_pause = 0;
 	while (con)
 	{
-		if (clk.GetUpdate(str))
+		if (clk.GetUpdate(id))
 		{
 			if (count == 1)
 			{
@@ -98,23 +95,23 @@ auto showDemo(std::string& str) -> int
 			}
 			++count;
 		}
-		if (clk.GetUpdate(str3))
+		if (clk.GetUpdate(clk3))
 		{
 			std::cout << "-----\n";
 		}
-		if (clk.GetElapsed(str) - begin >= time * 400 && set_pause == 0)
+		if (clk.GetElapsed(id) - begin >= time * 400 && set_pause == 0)
 		{
 			std::cout << "PAUSE!\n";
-			clk.SetPause(str3, true);
+			clk.SetPause(clk3, true);
 			++set_pause;
 		}
-		if (clk.GetElapsed(str) - begin >= time * 600 && set_pause == 1)
+		if (clk.GetElapsed(id) - begin >= time * 600 && set_pause == 1)
 		{
 			std::cout << "CONTINUE!\n";
-			clk.SetPause(str3, false);
+			clk.SetPause(clk3, false);
 			++set_pause;
 		}
-		if (clk.GetElapsed(str) - begin >= time * 1000)
+		if (clk.GetElapsed(id) - begin >= time * 1000)
 			con = false;
 	}
 	return 0;
