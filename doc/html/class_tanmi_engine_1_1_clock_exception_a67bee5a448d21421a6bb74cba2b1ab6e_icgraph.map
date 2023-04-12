@@ -1,16 +1,16 @@
 <map id="TanmiEngine::ClockException::what" name="TanmiEngine::ClockException::what">
 <area shape="rect" id="node1" title=" " alt="" coords="205,389,401,429"/>
-<area shape="rect" id="node2" href="$class_tanmi_engine_1_1_clock.html#a6c3afafba4ae06d3fd511dd15d436799" title="复制时钟" alt="" coords="12,5,151,45"/>
-<area shape="rect" id="node3" href="$class_tanmi_engine_1_1_clock.html#a991af0411fd768ec4318e9ad82e486d5" title="移除时钟" alt="" coords="12,69,151,109"/>
-<area shape="rect" id="node4" href="$class_tanmi_engine_1_1_clock.html#a95a060463ce8fa31c9214f086057746e" title="获取时钟自创建以来经过的绝对时长" alt="" coords="12,133,151,173"/>
-<area shape="rect" id="node5" href="$class_tanmi_engine_1_1_clock.html#a79e7591dacf1d286313c33491ddae233" title="获取时钟自创建以来经过的相对时长" alt="" coords="10,197,153,237"/>
-<area shape="rect" id="node6" href="$class_tanmi_engine_1_1_clock.html#a9e8f50903b8ce027e9c933ddbdbb1a44" title="获取时钟刷新率" alt="" coords="5,261,157,301"/>
-<area shape="rect" id="node7" href="$class_tanmi_engine_1_1_clock.html#a774162e60dbca15d27dc89a786fb108e" title="获取时钟是否暂停" alt="" coords="12,325,151,365"/>
-<area shape="rect" id="node8" href="$class_tanmi_engine_1_1_clock.html#a5ed7e66e35d3042f53c3d7290d3b05bd" title="获取时钟自上一刷新节点经过的绝对时长" alt="" coords="12,389,151,429"/>
-<area shape="rect" id="node9" href="$class_tanmi_engine_1_1_clock.html#a37c25e03a86326559832a36b9d71b99d" title="获取时钟自上一刷新节点经过的相对时长" alt="" coords="12,453,151,493"/>
-<area shape="rect" id="node10" href="$class_tanmi_engine_1_1_clock.html#a8af176f2d350e68d09c4909d667d591e" title="新建时钟" alt="" coords="12,517,151,557"/>
-<area shape="rect" id="node11" href="$class_tanmi_engine_1_1_clock.html#aebf3a0c1a704e45bd181dac0dd424626" title="重置时钟的计时器" alt="" coords="12,581,151,621"/>
-<area shape="rect" id="node12" href="$class_tanmi_engine_1_1_clock.html#ae4da8e156f48152e6963cabccc6bb948" title="设置时钟刷新率" alt="" coords="6,645,157,685"/>
-<area shape="rect" id="node13" href="$class_tanmi_engine_1_1_clock.html#a2b03ad25b6ef00a7a30ba64c480e4c38" title="设置时钟的时间缩放" alt="" coords="12,709,151,749"/>
-<area shape="rect" id="node14" href="$class_tanmi_engine_1_1_clock.html#a7915a9f3ccd68ee110a7f81edf456955" title="设置时钟暂停状态" alt="" coords="12,773,151,813"/>
+<area shape="rect" id="node2" href="$class_tanmi_engine_1_1_clock.html#af329e1753ca69176c2b72b4111766112" title="复制时钟" alt="" coords="12,5,151,45"/>
+<area shape="rect" id="node3" href="$class_tanmi_engine_1_1_clock.html#abb9d9f974596f55bd2c361a493cf92c2" title="移除时钟" alt="" coords="12,69,151,109"/>
+<area shape="rect" id="node4" href="$class_tanmi_engine_1_1_clock.html#a60b5cff26231f29793956d3015e1063e" title="获取时钟自创建以来经过的绝对时长" alt="" coords="12,133,151,173"/>
+<area shape="rect" id="node5" href="$class_tanmi_engine_1_1_clock.html#a83e6338a71708c3978d1d8587fde6e73" title="获取时钟自创建以来经过的相对时长" alt="" coords="10,197,153,237"/>
+<area shape="rect" id="node6" href="$class_tanmi_engine_1_1_clock.html#a1b0b958de2f6362bc1ea9cb62f53e8aa" title="获取时钟刷新率" alt="" coords="5,261,157,301"/>
+<area shape="rect" id="node7" href="$class_tanmi_engine_1_1_clock.html#a36a6434b45bce46883f9c601ac29de25" title="获取时钟是否暂停" alt="" coords="12,325,151,365"/>
+<area shape="rect" id="node8" href="$class_tanmi_engine_1_1_clock.html#ae442497d92e71563acfc19dd8aca64da" title="获取时钟自上一刷新节点经过的绝对时长" alt="" coords="12,389,151,429"/>
+<area shape="rect" id="node9" href="$class_tanmi_engine_1_1_clock.html#a74760d3c6281ed322ccb0c74178351a7" title="获取时钟自上一刷新节点经过的相对时长" alt="" coords="12,453,151,493"/>
+<area shape="rect" id="node10" href="$class_tanmi_engine_1_1_clock.html#a1fa35fa412af8a8e8aee4a3a1b2cfc6e" title="新建时钟" alt="" coords="12,517,151,557"/>
+<area shape="rect" id="node11" href="$class_tanmi_engine_1_1_clock.html#a53e1ae9c8382161cabde6391e7dd2b1c" title="重置时钟的计时器" alt="" coords="12,581,151,621"/>
+<area shape="rect" id="node12" href="$class_tanmi_engine_1_1_clock.html#a93e02393621feb5f5a683b89cf5ab24b" title="设置时钟刷新率" alt="" coords="6,645,157,685"/>
+<area shape="rect" id="node13" href="$class_tanmi_engine_1_1_clock.html#a19487c8c00ad6e854083a6b34e7e6a0c" title="设置时钟的时间缩放" alt="" coords="12,709,151,749"/>
+<area shape="rect" id="node14" href="$class_tanmi_engine_1_1_clock.html#a35e957b8ffa8a9c6809d91d825b882d3" title="设置时钟暂停状态" alt="" coords="12,773,151,813"/>
 </map>
