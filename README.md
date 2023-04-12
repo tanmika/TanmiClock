@@ -116,35 +116,35 @@ class Clock
 		// 获取Clock实例引用
 		static Clock& Instance();
 		//----------elemFunction----------
-		// 新建时钟，参数为时钟名称和刷新率
-		bool NewClock(const ClockID, double);
-		// 移除时钟，参数为时钟名称
+		// 新建时钟，参数为刷新率，返回时钟ID
+		ClockID NewClock(double);
+		// 移除时钟，参数为时钟ID
 		bool EraseClock(const ClockID);
-		// 复制时钟，参数为时钟名称和新时钟名称
-		bool CopyClock(const ClockID, const ClockID);
+		// 复制时钟，参数为时钟ID，返回新时钟ID
+		ClockID CopyClock(const ClockID, const ClockID);
 		//----------getFunction----------
-		// 获取时钟是否超过更新点，是则更新时钟，参数为时钟名称
+		// 获取时钟是否超过更新点，是则更新时钟，参数为时钟ID
 		bool GetUpdate(const ClockID);
-		// 获取时钟是否暂停，参数为时钟名称
+		// 获取时钟是否暂停，参数为时钟ID
 		bool GetPause(const ClockID);
-		// 获取时钟刷新率，参数为时钟名称
+		// 获取时钟刷新率，参数为时钟ID
 		double GetFramePerSecond(const ClockID);
-		// 获取时钟自创建以来经过的绝对时长，参数为时钟名称
+		// 获取时钟自创建以来经过的绝对时长，参数为时钟ID
 		double GetElapsed(const ClockID);
-		// 获取时钟自上一刷新节点经过的绝对时长，参数为时钟名称
+		// 获取时钟自上一刷新节点经过的绝对时长，参数为时钟ID
 		double GetTick(const ClockID);
-		// 获取时钟自创建以来经过的相对时长，参数为时钟名称
+		// 获取时钟自创建以来经过的相对时长，参数为时钟ID
 		double GetElapsedRelative(const ClockID);
-		// 获取时钟自上一刷新节点经过的相对时长，参数为时钟名称
+		// 获取时钟自上一刷新节点经过的相对时长，参数为时钟ID
 		double GetTickRelative(const ClockID);
 		//----------setFunction----------
-		// 设置时钟状态暂停或继续，参数为时钟名称和布尔值，true表示暂停，false表示继续
+		// 设置时钟状态暂停或继续，参数为时钟ID和布尔值，true表示暂停，false表示继续
 		void SetPause(const ClockID, bool);
-		// 设置刷新率，参数为时钟名称和刷新率
+		// 设置刷新率，参数为时钟ID和刷新率
 		void SetFramePerSecond(const ClockID, double);
-		// 设置时间缩放，参数为时钟名称和缩放值
+		// 设置时间缩放，参数为时钟ID和缩放值
 		void SetFrameScale(const ClockID, double);
-		// 重置时钟计时器，参数为时钟名称
+		// 重置时钟计时器，参数为时钟ID
 		void ResetClockIns(const ClockID);
 		//-----------tool-----------
 		// usingned long long计数器与ms计数器转换（Debug）
