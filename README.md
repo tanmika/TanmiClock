@@ -1,6 +1,6 @@
 # TanmiClock
 
-> 2023.4.13 update
+> 2023.4.16   update
 
 TanmiClock是一个基于单例模式的简单时钟系统，使用mutex保证线程安全。
 
@@ -75,6 +75,8 @@ demo文件夹下包含：
 	// 以下内容需包含事件系统以启用
 		// 添加事件test_event至时钟test
 		clk.AddEvent(test, test_event);
+		// 添加事件vector test_events至时钟test
+		clk.AddEvent(test, test_events);
 		// 移除clk中事件test_event
 		clk.RemoveEvent(test, test_event);
 		// 获取clk中的所有事件
@@ -153,6 +155,9 @@ class Clock
 		// 以下内容需包含事件系统以启用
 			// 添加事件至时钟
 			void AddEvent(const ClockID, const Event&);
+			// 将事件列表中所有事件添加至时钟
+			template<EventContainer T>
+			void AddEvent(const ClockID _id, const T& events);
 			// 移除事件
 			void RemoveEvent(const ClockID, const Event&);
 			// 获取事件列表
