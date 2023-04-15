@@ -2,8 +2,7 @@
  * @file	TanmiClock
  * @author	Tanmika
  * @email	tanmika@foxmail.com
- * @date	2023-4-12
- * @version	1.1
+ * @date	2023-4-16
  * @brief	基于单例模式的简单时钟系统
  */
 #pragma once
@@ -21,6 +20,19 @@ namespace TanmiEngine
 	using ull = unsigned long long;	///< 使用 unsigned long long 定义 ull。
 	using lint = LARGE_INTEGER;		///< 使用 LARGE_INTEGER 定义 lint。
 	using ClockID = int;			///< 使用 int 定义 ClockID。
+
+#ifdef EVENT_SYSTEM
+	/**
+	 * @brief 可顺序读取的事件容器
+	 */
+	template<typename Container>
+	concept EventContainer = requires(Container c)
+	{
+		typename Container::value_type;
+			requires std::is_base_of_v<Event, typename Container::value_type>;
+			requires std::ranges::input_range<Container>;
+	};
+#endif // EVENT_SYSTEM
 
 	/**
 	 * @brief Clock 类异常基类。
@@ -119,7 +131,7 @@ namespace TanmiEngine
 		std::mutex templock;    ///< 缓冲锁
 
 #ifdef EVENT_SYSTEM
-		std::vector<std::shared_ptr<Event>> eventList;  ///< 事件列表
+		std::vector<EventID> eventList;  ///< 事件列表
 #endif // EVENT_SYSTEM
 	};
 
@@ -155,7 +167,7 @@ namespace TanmiEngine
 		const int MAX_SCALE = 1000;			///< 最大缩放倍数
 		const double MIN_SCALE = 0.001;		///< 最小缩放倍数
 	private:
-		Clock();	///< 构造函数 
+		Clock();	///< 构造函数
 		Clock(Clock&) = delete;	///< 禁用拷贝构造函数
 		Clock& operator=(Clock&) = delete;	///< 禁用拷贝赋值运算符
 		Clock(Clock&&) = delete;	///< 禁用移动构造函数
@@ -334,6 +346,13 @@ namespace TanmiEngine
 		 */
 		void AddEvent(const ClockID _id, const Event& event);
 		/**
+		* @brief 将事件列表中所有事件添加至指定时钟
+		* @param _id 时钟ID
+		* @param events 事件列表
+		*/
+		template<EventContainer T>
+		void AddEvent(const ClockID _id, const T& events);
+		/**
 		 * @brief 移除指定时钟中的事件
 		 * @param _id 时钟ID
 		 * @param event 事件ID
@@ -344,7 +363,7 @@ namespace TanmiEngine
 		 * @param _id 时钟ID
 		 * @return 事件列表
 		 */
-		std::vector<std::shared_ptr<Event>>& GetEventList(const ClockID _id);
+		std::vector<EventID>& GetEventList(const ClockID _id);
 		/**
 		 * @brief 清空指定时钟中的事件列表
 		 * @param _id 时钟ID
@@ -728,8 +747,8 @@ namespace TanmiEngine
 		{
 			std::cout << "\n::Clock::getFreqNow()" << exp.what() << std::endl;
 		}
-		ull void_ull = 0;
-		return void_ull;
+		i->temp_ull = 0;
+		return i->temp_ull;
 	}
 
 	inline ull& Clock::getFreqNow(std::shared_ptr<ClockElem> i)
@@ -749,8 +768,8 @@ namespace TanmiEngine
 		{
 			std::cout << "\n::Clock::getFreqNow()" << exp.what() << std::endl;
 		}
-		ull void_ull = 0;
-		return void_ull;
+		i->temp_ull = 0;
+		return i->temp_ull;
 	}
 
 	inline bool Clock::isUpdate(const ClockID _id)
@@ -778,9 +797,10 @@ namespace TanmiEngine
 				EventSystem& eventSystem = EventSystem::Instance();
 				QueryPerformanceFrequency(&i->temp_lint);
 				auto freq = i->temp_lint.QuadPart;
-				for (auto& e : i->eventList)
+				std::lock_guard<std::mutex> lock(i->lock);
+				for (auto e : i->eventList)
 				{
-					eventSystem.TriggerEventUpdate(*e, relative_passed * 1000 / freq);
+					eventSystem.TriggerEventUpdate(e, relative_passed * 1000 / freq);
 				}
 #endif // EVENT_SYSTEM
 				return true;
@@ -820,9 +840,10 @@ namespace TanmiEngine
 				EventSystem& eventSystem = EventSystem::Instance();
 				QueryPerformanceFrequency(&i->temp_lint);
 				auto freq = i->temp_lint.QuadPart;
-				for (auto& e : i->eventList)
+				std::lock_guard<std::mutex> lock(i->lock);
+				for (auto e : i->eventList)
 				{
-					eventSystem.TriggerEventUpdate(*e, relative_passed * 1000 / freq);
+					eventSystem.TriggerEventUpdate(e, relative_passed * 1000 / freq);
 				}
 #endif // EVENT_SYSTEM
 				return true;
@@ -852,15 +873,36 @@ namespace TanmiEngine
 			if (eventsystem.IsEventExistNoException(event) == false)
 				throw ClockEventNotFoundException();
 			std::lock_guard<std::mutex> lock(i->lock);
-			auto e = std::make_shared<Event>(event);
-			i->eventList.push_back(e);
+			i->eventList.push_back(event.ID);
 		}
 		catch (ClockException& exp)
 		{
 			std::cout << "\n::Clock::AddEvent()" << exp.what() << std::endl;
 		}
 	}
-
+	template<EventContainer T>
+	inline void Clock::AddEvent(const ClockID _id, const T& events)
+	{
+		std::shared_ptr<ClockElem> i(nullptr);
+		try
+		{
+			i = getIterator(_id);
+			if (i.get() == nullptr)
+				throw ClockNotFoundException();
+			EventSystem& eventsystem = EventSystem::Instance();
+			for (auto e : events)
+			{
+				if (eventsystem.IsEventExistNoException(e) == false)
+					throw ClockEventNotFoundException();
+				std::lock_guard<std::mutex> lock(i->lock);
+				i->eventList.push_back(e.ID);
+			}
+		}
+		catch (ClockException& exp)
+		{
+			std::cout << "\n::Clock::AddEvent()" << exp.what() << std::endl;
+		}
+	}
 	inline void Clock::RemoveEvent(const ClockID _id, const Event& event)
 	{
 		std::shared_ptr<ClockElem> i(nullptr);
@@ -872,10 +914,9 @@ namespace TanmiEngine
 			EventSystem& eventsystem = EventSystem::Instance();
 			bool isExist = false;
 			std::lock_guard<std::mutex> lock(i->lock);
-			auto _e = std::make_shared<Event>(event);
 			for (auto e = i->eventList.begin(); e != i->eventList.end(); ++e)
 			{
-				if (*e == _e)
+				if (*e == event.ID)
 				{
 					isExist = true;
 					i->eventList.erase(e);
@@ -891,7 +932,7 @@ namespace TanmiEngine
 		}
 	}
 
-	inline std::vector<std::shared_ptr<Event>>& Clock::GetEventList(const ClockID _id)
+	inline std::vector<EventID>& Clock::GetEventList(const ClockID _id)
 	{
 		std::shared_ptr<ClockElem> i(nullptr);
 		try
@@ -899,6 +940,7 @@ namespace TanmiEngine
 			i = getIterator(_id);
 			if (i.get() == nullptr)
 				throw ClockNotFoundException();
+			std::lock_guard<std::mutex> lock(i->lock);
 			return i->eventList;
 		}
 		catch (ClockException& exp)
@@ -915,6 +957,7 @@ namespace TanmiEngine
 			i = getIterator(_id);
 			if (i.get() == nullptr)
 				throw ClockNotFoundException();
+			std::lock_guard<std::mutex> lock(i->lock);
 			i->eventList.clear();
 		}
 		catch (ClockException& exp)
