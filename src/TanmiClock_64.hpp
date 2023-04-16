@@ -1,10 +1,12 @@
-/**
- * @file	TanmiClock
- * @author	Tanmika
- * @email	tanmika@foxmail.com
- * @date	2023-4-16
- * @brief	基于单例模式的简单时钟系统
- */
+/*****************************************************************//**
+ * \file   TanmiClock.hpp
+ * \brief  一个基于单例模式的时钟系统
+ *
+ * \author tanmika
+ * \email  tanmika@foxmail.com
+ * \date   April 2023
+ *********************************************************************/
+
 #pragma once
 #include <iostream>
 #include <Windows.h>
@@ -181,7 +183,8 @@ namespace TanmiEngine
 		/**
 		* @brief 获取时钟对象指针，失败时返回nullptr
 		* @param _id 时钟对象ID
-		* @return std::shared_ptr<ClockElem> 时钟对象指针，若找不到则返回nullptr
+		* @return std::shared_ptr<ClockElem> 时钟对象指针
+		* @return nullptr 未找到目标对象
 		*/
 		inline std::shared_ptr<ClockElem> getIterator(const ClockID _id);
 		/**
@@ -347,6 +350,8 @@ namespace TanmiEngine
 		void AddEvent(const ClockID _id, const Event& event);
 		/**
 		* @brief 将事件列表中所有事件添加至指定时钟
+		*
+		* @tparam T 事件列表类型
 		* @param _id 时钟ID
 		* @param events 事件列表
 		*/
